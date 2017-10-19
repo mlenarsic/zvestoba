@@ -1,9 +1,13 @@
 package si.fri.prpo.skupina20;
+        import com.kumuluz.ee.configuration.utils.ConfigurationUtil;
+
         import javax.servlet.ServletException;
         import javax.servlet.http.HttpServlet;
         import javax.servlet.annotation.WebServlet;
         import javax.servlet.http.*;
         import java.io.*;
+        import java.util.Optional;
+
 
 @WebServlet("servlet")
 public class JdbcServlet extends HttpServlet{
@@ -15,8 +19,8 @@ public class JdbcServlet extends HttpServlet{
 
         writer.append("Hello World\n");
 
-        //String serviceName = ConfigurationUtil.getInstance().get("kumuluzee.name").orElse(other:"VREDNOSTI NI");
-       // writer.append(serviceName);
+        String serviceName = ConfigurationUtil.getInstance().get("kumuluzee.name").orElse("VReDNOSTI NI");
+        writer.append(serviceName);
 
     }
 }
