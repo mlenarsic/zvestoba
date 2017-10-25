@@ -12,8 +12,8 @@
     </database>
     <schema id="4" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2017-10-25.09:15:06.297</IntrospectionTimestamp>
-      <IntrospectionStateNumber>557</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2017-10-25.10:45:07.004</IntrospectionTimestamp>
+      <IntrospectionStateNumber>584</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -33,23 +33,45 @@
       <ObjectId>12703</ObjectId>
     </schema>
     <table id="10" parent="4" name="uporabniki">
-      <ObjectId>16385</ObjectId>
-      <StateNumber>557</StateNumber>
+      <ObjectId>16401</ObjectId>
+      <StateNumber>584</StateNumber>
     </table>
     <column id="11" parent="10" name="id">
       <Position>1</Position>
       <DataType>integer|0</DataType>
-      <StateNumber>557</StateNumber>
+      <NotNull>1</NotNull>
+      <StateNumber>584</StateNumber>
     </column>
     <column id="12" parent="10" name="ime">
       <Position>2</Position>
-      <DataType>varchar(10)|0</DataType>
-      <StateNumber>557</StateNumber>
+      <DataType>varchar(256)|0</DataType>
+      <StateNumber>584</StateNumber>
     </column>
     <column id="13" parent="10" name="priimek">
       <Position>3</Position>
-      <DataType>varchar(20)|0</DataType>
-      <StateNumber>557</StateNumber>
+      <DataType>varchar(256)|0</DataType>
+      <StateNumber>584</StateNumber>
     </column>
+    <column id="14" parent="10" name="Uporabniško ime">
+      <Position>4</Position>
+      <DataType>varchar(256)|0</DataType>
+      <StateNumber>584</StateNumber>
+    </column>
+    <column id="15" parent="10" name="E-mail">
+      <Position>5</Position>
+      <DataType>varchar(256)|0</DataType>
+      <StateNumber>584</StateNumber>
+    </column>
+    <index id="16" parent="10" name="uporabniki_pkey">
+      <ObjectId>16407</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="17" parent="10" name="uporabniki_pkey">
+      <ObjectId>16408</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>uporabniki_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
   </database-model>
 </dataSource>
