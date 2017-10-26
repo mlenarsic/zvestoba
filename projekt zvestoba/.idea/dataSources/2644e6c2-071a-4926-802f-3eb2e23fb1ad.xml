@@ -12,8 +12,8 @@
     </database>
     <schema id="4" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2017-10-25.10:45:07.004</IntrospectionTimestamp>
-      <IntrospectionStateNumber>584</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2017-10-26.11:39:10.826</IntrospectionTimestamp>
+      <IntrospectionStateNumber>587</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -52,10 +52,10 @@
       <DataType>varchar(256)|0</DataType>
       <StateNumber>584</StateNumber>
     </column>
-    <column id="14" parent="10" name="Uporabniško ime">
+    <column id="14" parent="10" name="uporabniskoime">
       <Position>4</Position>
       <DataType>varchar(256)|0</DataType>
-      <StateNumber>584</StateNumber>
+      <StateNumber>587</StateNumber>
     </column>
     <column id="15" parent="10" name="E-mail">
       <Position>5</Position>

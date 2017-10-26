@@ -1,6 +1,6 @@
 package si.fri.prpo.skupina20;
 
-public class uporabniki extends Entiteta {
+public class Uporabnik extends Entiteta {
     private String ime;
     private String priimek;
     private String uporabniskoIme;
