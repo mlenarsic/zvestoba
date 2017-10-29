@@ -13,7 +13,12 @@ import java.util.logging.Logger;
 
 public class UporabnikDAOimpl implements BaseDao {
     private Connection con;
-    private Logger log = Logger.getLogger("UporabnikDAOimpl.log");
+    private Logger log;
+
+    public UporabnikDAOimpl(){
+        this.con = getConnection();
+        this.log = Logger.getLogger("UporabnikDAOimpl.log");
+    }
 
     @Override
     public Connection getConnection() {

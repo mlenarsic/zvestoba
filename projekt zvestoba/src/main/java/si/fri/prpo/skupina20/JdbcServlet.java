@@ -15,16 +15,17 @@ public class JdbcServlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        Logger LOGGER = Logger.getLogger("InfoLogging");
         // implementacija 1. naloga
         PrintWriter writer = resp.getWriter();
         writer.append("Hello World\n");
-        LOGGER.info("Hello World\n");
+
         String serviceName = ConfigurationUtil.getInstance().get("kumuluzee.name").orElse("VReDNOSTI NI");
         writer.append(serviceName);
 
         // implementacija 2. naloga
+
         UporabnikDAOimpl xy = new UporabnikDAOimpl();
+        /*
         Uporabnik up = new Uporabnik();
         Uporabnik up2 = new Uporabnik();
         // INSERT
