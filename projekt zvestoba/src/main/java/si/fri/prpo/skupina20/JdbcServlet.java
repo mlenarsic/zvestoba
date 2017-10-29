@@ -6,56 +6,75 @@ package si.fri.prpo.skupina20;
         import javax.servlet.annotation.WebServlet;
         import javax.servlet.http.*;
         import java.io.*;
+        import java.util.ArrayList;
+        import java.util.List;
         import java.util.Optional;
         import java.util.logging.Logger;
 
 
 @WebServlet("servlet")
 public class JdbcServlet extends HttpServlet{
+    Logger LOGGER = Logger.getLogger("InfoLogging");
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        // implementacija 1. naloga
         PrintWriter writer = resp.getWriter();
-        writer.append("Hello World\n");
-
-        String serviceName = ConfigurationUtil.getInstance().get("kumuluzee.name").orElse("VReDNOSTI NI");
-        writer.append(serviceName);
-
         // implementacija 2. naloga
-
         UporabnikDAOimpl xy = new UporabnikDAOimpl();
-        /*
+
         Uporabnik up = new Uporabnik();
         Uporabnik up2 = new Uporabnik();
-        // INSERT
-        up.setIme("Kr");
-        up.setPriimek("Neki");
+        // INSERT -> dela!
+        /*
+        up.setIme("John");
+        up.setPriimek("Smith");
         up.setUporabniskoIme("krneki123");
         up.setEmail("kr.nekiAFNAznjmajl.si");
-        up.setId(1);
         up2.setIme("Michael");
-        up2.setPriimek("Neki");
+        up2.setPriimek("Brown");
         up2.setUporabniskoIme("mike");
-        up2.setEmail("232323mikemikeAFNAznjmejl.si");
-        up2.setId(2);
+        up2.setEmail("232323mikemikeznjmejl.si");
         xy.vstavi(up);
         xy.vstavi(up2);
-        // SELECT
-        writer.append(xy.vrniVse().toString());
-        // writer.append(xy.vrni(1).toString());
-        LOGGER.info(xy.vrniVse().toString());
-        // LOGGER.info(xy.vrni(1).toString());
+        */
+        // SELECT -> dela!
+
+        List<Entiteta> seznam = xy.vrniVse();
+        for (int i = 0; i < seznam.size(); i++){
+            Uporabnik temp = (Uporabnik)seznam.get(i);
+            writer.append(temp.getIme()+ " " + temp.getPriimek() + "\n");
+            LOGGER.info(temp.getIme()+ " " + temp.getPriimek() + "\n");
+        }
+
+        // KONEC DOMACE NALOGE
+
+        // DELETE -> dela!
         /*
-        // UPDATE
-        up.setEmail("krnekiAFNAhotmejl.si");
+        xy.odstrani(2);
+        xy.odstrani(3);
+        xy.odstrani(11);
+        xy.odstrani(12);
+        Uporabnik uporabnik = (Uporabnik)xy.vrni(3);
+        List<Entiteta> seznam = xy.vrniVse();
+        for (int i = 0; i < seznam.size(); i++){
+            Uporabnik temp = (Uporabnik)seznam.get(i);
+            writer.append(temp.getIme()+"\n");
+            LOGGER.info(temp.getIme()+"\n");
+        }
+        */
+        // UPDATE -> semi dela!
+        /*
+        up.setIme("Kra");
+        up.setId(16);
+        up2.setPriimek("Jordan");
+        up2.setId(17);
         xy.posodobi(up);
-        writer.append(xy.vrni(1).toString());
-        LOGGER.info(xy.vrni(1).toString());
-        // DELETE
-        xy.odstrani(1);
-        writer.append(xy.vrniVse().toString());
-        LOGGER.info(xy.vrniVse().toString());
+        xy.posodobi(up2);
+        List<Entiteta> seznam = xy.vrniVse();
+        for (int i = 0; i < seznam.size(); i++){
+            Uporabnik temp = (Uporabnik)seznam.get(i);
+            writer.append(temp.getIme()+ " " + temp.getPriimek() + "\n");
+            LOGGER.info(temp.getIme()+ " " + temp.getPriimek() + "\n");
+        }
         */
     }
 }

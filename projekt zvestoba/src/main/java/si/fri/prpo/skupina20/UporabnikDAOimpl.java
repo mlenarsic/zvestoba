@@ -45,7 +45,6 @@ public class UporabnikDAOimpl implements BaseDao {
             if (con == null) {
                 con = getConnection();
             }
-
             String sql = "SELECT * FROM uporabnik WHERE id = ?";
             ps = con.prepareStatement(sql);
             ps.setInt(1, id);
@@ -79,14 +78,13 @@ public class UporabnikDAOimpl implements BaseDao {
                 con = getConnection();
             }
             String sql = "INSERT INTO uporabnik"
-                    + "(id, ime, priimek, uporabniskoime, E-mail) VALUES"
-                    + "(?,?,?,?,?)";
+                    + "(ime, priimek, uporabnisko_ime, email) VALUES"
+                    + "(?,?,?,?)";
             ps = con.prepareStatement(sql);
-            ps.setInt(1, up.getId());
-            ps.setString(2, up.getIme());
-            ps.setString(3, up.getPriimek());
-            ps.setString(4, up.getUporabniskoIme());
-            ps.setString(5, up.getEmail());
+            ps.setString(1, up.getIme());
+            ps.setString(2, up.getPriimek());
+            ps.setString(3, up.getUporabniskoIme());
+            ps.setString(4, up.getEmail());
             ResultSet rs = ps.executeQuery();
 
         } catch (SQLException e) {
@@ -200,7 +198,7 @@ public class UporabnikDAOimpl implements BaseDao {
     private Uporabnik getUporabnikFromRS(ResultSet rs) throws SQLException {
         String ime = rs.getString("ime");
         String priimek = rs.getString("priimek");
-        String uporabniskoime = rs.getString("uporabniskoime");
+        String uporabniskoime = rs.getString("uporabnisko_ime");
         String email = rs.getString("email");
         Uporabnik uporabnik = new Uporabnik();
         uporabnik.setIme(ime);
