@@ -138,9 +138,13 @@ public class UporabnikDAOimpl implements BaseDao {
             }
 
             String sql = "UPDATE uporabnik "
-                    + "SET ime = ?, priimek = ?, uporabniskoime = ?, E-mail = ? "
+                    + "SET ime = ?, priimek = ?, uporabnisko_ime = ?, email = ? "
                     + "WHERE id = ?";
             ps = con.prepareStatement(sql);
+            System.out.println(up.getId() + "NEKI");
+            System.out.println(up.getIme() + "NEKI");
+            System.out.println(up.getPriimek() + "NEKI");
+            System.out.println(up.getUporabniskoIme() + "NEKI");
             ps.setString(1, up.getIme());
             ps.setString(2, up.getPriimek());
             ps.setString(3, up.getUporabniskoIme());
@@ -172,7 +176,7 @@ public class UporabnikDAOimpl implements BaseDao {
                 con = getConnection();
             }
 
-            String sql = "SELECT * FROM uporabnik";
+            String sql = "SELECT * FROM uporabnik ORDER BY id";
             ps = con.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
 
@@ -200,11 +204,14 @@ public class UporabnikDAOimpl implements BaseDao {
         String priimek = rs.getString("priimek");
         String uporabniskoime = rs.getString("uporabnisko_ime");
         String email = rs.getString("email");
+        int id = rs.getInt("id");
         Uporabnik uporabnik = new Uporabnik();
         uporabnik.setIme(ime);
         uporabnik.setPriimek(priimek);
         uporabnik.setEmail(email);
         uporabnik.setUporabniskoIme(uporabniskoime);
+        uporabnik.setId(id);
+
         return uporabnik;
 
     }
