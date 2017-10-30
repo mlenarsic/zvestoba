@@ -12,8 +12,8 @@
     </database>
     <schema id="4" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2017-10-29.15:08:08.588</IntrospectionTimestamp>
-      <IntrospectionStateNumber>557</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2017-10-30.12:27:14.377</IntrospectionTimestamp>
+      <IntrospectionStateNumber>595</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -33,51 +33,56 @@
       <ObjectId>12703</ObjectId>
     </schema>
     <sequence id="10" parent="4" name="uporabnik_id_seq">
-      <ObjectId>16385</ObjectId>
-      <StateNumber>557</StateNumber>
+      <ObjectId>24580</ObjectId>
+      <StateNumber>594</StateNumber>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
-    <table id="11" parent="4" name="uporabnik">
-      <ObjectId>16387</ObjectId>
-      <StateNumber>557</StateNumber>
+    <sequence id="11" parent="4" name="uporabniki_id_seq">
+      <ObjectId>24577</ObjectId>
+      <StateNumber>590</StateNumber>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <table id="12" parent="4" name="uporabnik">
+      <ObjectId>16401</ObjectId>
+      <StateNumber>593</StateNumber>
     </table>
-    <column id="12" parent="11" name="ime">
+    <column id="13" parent="12" name="id">
       <Position>1</Position>
-      <DataType>varchar(50)|0</DataType>
-      <StateNumber>557</StateNumber>
-    </column>
-    <column id="13" parent="11" name="priimek">
-      <Position>2</Position>
-      <DataType>varchar(50)|0</DataType>
-      <StateNumber>557</StateNumber>
-    </column>
-    <column id="14" parent="11" name="uporabnisko_ime">
-      <Position>3</Position>
-      <DataType>varchar(25)|0</DataType>
-      <StateNumber>557</StateNumber>
-    </column>
-    <column id="15" parent="11" name="email">
-      <Position>4</Position>
-      <DataType>varchar(60)|0</DataType>
-      <StateNumber>557</StateNumber>
-    </column>
-    <column id="16" parent="11" name="id">
-      <Position>5</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>557</StateNumber>
+      <StateNumber>595</StateNumber>
       <SequenceName>uporabnik_id_seq</SequenceName>
       <DefaultExpression>nextval(&apos;uporabnik_id_seq&apos;::regclass)</DefaultExpression>
     </column>
-    <index id="17" parent="11" name="uporabnik_pkey">
-      <ObjectId>16391</ObjectId>
+    <column id="14" parent="12" name="ime">
+      <Position>2</Position>
+      <DataType>varchar(256)|0</DataType>
+      <StateNumber>584</StateNumber>
+    </column>
+    <column id="15" parent="12" name="priimek">
+      <Position>3</Position>
+      <DataType>varchar(256)|0</DataType>
+      <StateNumber>584</StateNumber>
+    </column>
+    <column id="16" parent="12" name="uporabnisko_ime">
+      <Position>4</Position>
+      <DataType>varchar(256)|0</DataType>
+      <StateNumber>589</StateNumber>
+    </column>
+    <column id="17" parent="12" name="email">
+      <Position>5</Position>
+      <DataType>varchar(256)|0</DataType>
+      <StateNumber>588</StateNumber>
+    </column>
+    <index id="18" parent="12" name="uporabniki_pkey">
+      <ObjectId>16407</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="18" parent="11" name="uporabnik_pkey">
-      <ObjectId>16392</ObjectId>
+    <key id="19" parent="12" name="uporabniki_pkey">
+      <ObjectId>16408</ObjectId>
       <ColNames>id</ColNames>
-      <UnderlyingIndexName>uporabnik_pkey</UnderlyingIndexName>
+      <UnderlyingIndexName>uporabniki_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
   </database-model>

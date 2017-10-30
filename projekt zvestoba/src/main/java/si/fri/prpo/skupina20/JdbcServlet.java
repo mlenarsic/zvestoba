@@ -20,11 +20,11 @@ public class JdbcServlet extends HttpServlet{
         PrintWriter writer = resp.getWriter();
         // implementacija 2. naloga
         UporabnikDAOimpl xy = new UporabnikDAOimpl();
-
+        /*
         Uporabnik up = new Uporabnik();
         Uporabnik up2 = new Uporabnik();
         // INSERT -> dela!
-        /*
+
         // up.setId(28);
         up.setIme("John");
         up.setPriimek("Smith");
@@ -37,19 +37,19 @@ public class JdbcServlet extends HttpServlet{
         up2.setEmail("232323mikemikeznjmejl.si");
         xy.vstavi(up);
         xy.vstavi(up2);
-        */
-        // SELECT -> dela!
 
+        // SELECT -> dela!
+        */
         List<Entiteta> seznam = xy.vrniVse();
         for (int i = 0; i < seznam.size(); i++){
             Uporabnik temp = (Uporabnik)seznam.get(i);
             writer.append(temp.getIme()+ " " + temp.getPriimek() + " " + temp.getId() + "\n");
             LOGGER.info(temp.getIme()+ " " + temp.getPriimek() + "\n");
         }
-
+        writer.append("\n\n");
 
         // KONEC DOMACE NALOGE
-
+        /*
         // DELETE -> dela!
         /*
         xy.odstrani(20);
@@ -63,19 +63,20 @@ public class JdbcServlet extends HttpServlet{
             writer.append(temp.getIme()+"\n");
             LOGGER.info(temp.getIme()+"\n");
         }
-        */
+
         // UPDATE -> dela!
-        /*
+
         Uporabnik uporabnik = (Uporabnik)xy.vrni(1);
         uporabnik.setIme("Krava");
+        uporabnik.setPriimek("Milka");
         //up.setId(22);
         //up2.setPriimek("Jordan");
         //up2.setId(17);
         xy.posodobi(uporabnik);
         //xy.posodobi(up2);
-        List<Entiteta> seznam = xy.vrniVse();
+        List<Entiteta> seznam1 = xy.vrniVse();
         for (int i = 0; i < seznam.size(); i++){
-            Uporabnik temp = (Uporabnik)seznam.get(i);
+            Uporabnik temp = (Uporabnik)seznam1.get(i);
             writer.append(temp.getIme()+ " " + temp.getPriimek() + " " + temp.getId() + "\n");
             LOGGER.info(temp.getIme()+ " " + temp.getPriimek() + " " + temp.getId() + "\n");
         }
