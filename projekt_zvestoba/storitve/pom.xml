@@ -13,6 +13,7 @@
 
     <properties>
         <kumuluzee.version>2.4.1</kumuluzee.version>
+        <entitete.version>4.0.0</entitete.version>
     </properties>
 
     <dependencies>
@@ -24,7 +25,7 @@
 
         <dependency>
             <groupId>com.kumuluz.ee</groupId>
-            <artifactId>kumuluzee-jta</artifactId>
+            <artifactId>kumuluzee-jta-common</artifactId>
             <version>2.4.1</version>
         </dependency>
 
