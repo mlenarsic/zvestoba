@@ -7,7 +7,10 @@
     <groupId>skupina20</groupId>
     <artifactId>projekt_zvestoba</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <properties>
 
+        <kumuluzee.version>2.4.1</kumuluzee.version>
+    </properties>
 
     <packaging>pom</packaging>
 
@@ -16,6 +19,24 @@
         <module>storitve</module>
         <module>entitete</module>
     </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.kumuluz.ee</groupId>
+                <artifactId>kumuluzee-maven-plugin</artifactId>
+                <version>${kumuluzee.version}</version>
+                <executions>
+                    <execution>
+                        <id>package</id>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
 
 </project>
