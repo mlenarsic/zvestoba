@@ -3,7 +3,13 @@ import javax.persistence.*;
 @Entity(name = "uporabnik")
 @NamedQueries(value =
         {
-                @NamedQuery(name = "Opomnik.getAll", query = "SELECT o FROM uporabnik o")
+                @NamedQuery(name = "Uporabnik.getAll", query = "SELECT u FROM uporabnik u"),
+                @NamedQuery(name="Uporabnik.getByIme",
+                        query="SELECT u FROM uporabnik u WHERE u.ime = :name"),
+                @NamedQuery(name="Uporabnik.getById",
+                        query="SELECT u FROM uporabnik u WHERE u.id = :id"),
+                @NamedQuery(name="Uporabnik.getNew",
+                        query="SELECT u FROM uporabnik u WHERE u.id > :id")
         })
 public class Uporabnik {
     @Id
@@ -18,12 +24,7 @@ public class Uporabnik {
 
     private String email;
 
-    @ManyToOne
-    @JoinColumn(name = "lokacija_id")
-    private Storitev storitev;
-
     // getter in setter metode
-
 
     public Integer getId() {
         return id;
@@ -63,13 +64,5 @@ public class Uporabnik {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public Lokacija getLokacija() {
-        return lokacija;
-    }
-
-    public void setLokacija(Lokacija lokacija) {
-        this.lokacija = lokacija;
     }
 }
