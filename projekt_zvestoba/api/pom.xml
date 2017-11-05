@@ -11,6 +11,9 @@
 
     <artifactId>api</artifactId>
 
+    <properties>
+       <kumuzulzee.version>2.4.1</kumuzulzee.version>
+    </properties>
 
     <dependencies>
         <dependency>
@@ -32,5 +35,20 @@
         </dependency>
 
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.kumuluz.ee</groupId>
+                <artifactId>kumuluzee-maven-plugin</artifactId>
+                <version>${kumuluzee.version}</version>
+                <executions>
+                    <execution>
+                        <id>package</id>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
