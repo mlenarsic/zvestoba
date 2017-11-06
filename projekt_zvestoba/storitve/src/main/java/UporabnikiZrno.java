@@ -14,7 +14,7 @@ public class UporabnikiZrno {
         for(int i = 0; i < rl.size(); i++){
             Uporabnik u = (Uporabnik)rl.get(i);
             uporabniki.add((Uporabnik)rl.get(i));
-            System.out.println(u.getIme() + " " + u.getPriimek());
+            // System.out.println(u.getIme() + " " + u.getPriimek());
         }
         return uporabniki;
     }

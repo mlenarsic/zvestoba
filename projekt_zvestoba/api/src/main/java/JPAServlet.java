@@ -18,11 +18,13 @@ public class JPAServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws SecurityException, IOException {
 
         PrintWriter writer = resp.getWriter();
+
         List<Uporabnik> uporabniki = uporabnikiZrno.getUporabniki();
         for(int i = 0; i < uporabniki.size(); i++){
             Uporabnik u = uporabniki.get(i);
-            writer.append(u.getIme() + " " + u.getPriimek() + " " + u.getUporabnisko_ime() + " " + u.getId());
+            writer.append(u.getIme() + " " + u.getPriimek() + " " + u.getUporabnisko_ime() + " " + u.getId() + "\n");
         }
+
 
     }
 }

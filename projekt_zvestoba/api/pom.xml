@@ -12,8 +12,12 @@
     <artifactId>api</artifactId>
 
     <properties>
-       <kumuzulzee.version>2.4.1</kumuzulzee.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <kumuluzee.version>2.4.1</kumuluzee.version>
     </properties>
+
 
     <dependencies>
         <dependency>
@@ -45,6 +49,9 @@
                 <executions>
                     <execution>
                         <id>package</id>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
                     </execution>
                 </executions>
             </plugin>
