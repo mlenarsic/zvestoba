@@ -1,6 +1,6 @@
 import javax.enterprise.context.ApplicationScoped;
 import javax.persistence.*;
-import javax.transaction.Transactional;
+import javax.transaction.*;
 import java.util.*;
 @ApplicationScoped
 public class UporabnikiZrno {
@@ -8,6 +8,7 @@ public class UporabnikiZrno {
     @PersistenceContext(unitName = "zvestoba-jpa")
     private EntityManager em;
 
+    @BeleziKlice
     public List<Uporabnik> pridobiUporabnike() {
         Query q = em.createNamedQuery("Uporabnik.getAll");
         List rl = q.getResultList();
@@ -19,6 +20,7 @@ public class UporabnikiZrno {
         return uporabniki;
     }
 
+    @BeleziKlice
     public Uporabnik pridobiUporabnika(int uporabnikId) {
         Query q = em.createNamedQuery("Uporabnik.getById").setParameter("id",uporabnikId);
         List rl = q.getResultList();
@@ -26,11 +28,13 @@ public class UporabnikiZrno {
         return (Uporabnik)rl.get(0);
     }
 
+    @BeleziKlice
     @Transactional
     public void dodajUporabnika(Uporabnik uporabnik) {
         em.persist(uporabnik);
     }
 
+    @BeleziKlice
     @Transactional
     public void posodobiUporabnika(int uporabnikId, Uporabnik uporabnik) {
         odstraniUporabnika(uporabnik.getId());
@@ -38,6 +42,7 @@ public class UporabnikiZrno {
         dodajUporabnika(uporabnik);
     }
 
+    @BeleziKlice
     @Transactional
     public void odstraniUporabnika(int uporabnikId) {
         Uporabnik u = (Uporabnik) em.createNamedQuery("Uporabnik.getById").setParameter("id", uporabnikId).getResultList().get(0);

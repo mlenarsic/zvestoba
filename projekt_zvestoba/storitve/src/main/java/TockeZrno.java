@@ -8,6 +8,7 @@ public class TockeZrno {
     @PersistenceContext(unitName = "zvestoba-jpa")
     private EntityManager em;
 
+    @BeleziKlice
     public List<Tocke> pridobiTocke() {
         Query q = em.createNamedQuery("Tocke.getAll");
         List rl = q.getResultList();
@@ -18,6 +19,7 @@ public class TockeZrno {
         return tocke;
     }
 
+    @BeleziKlice
     public Tocke pridobiTocko(int tockeId) {
         Query q = em.createNamedQuery("Tocke.getById").setParameter("id",tockeId);
         List rl = q.getResultList();
@@ -25,17 +27,20 @@ public class TockeZrno {
         return t;
     }
 
+    @BeleziKlice
     @Transactional
     public void dodajTocko(Tocke t) {
         em.persist(t);
     }
 
+    @BeleziKlice
     @Transactional
     public void posodobiTocko(int tockeId, Tocke t){
         odstraniTocko(t.getId_kartice());
         t.setId_kartice(tockeId);
         dodajTocko(t);
     }
+    @BeleziKlice
     @Transactional
     public void odstraniTocko(int tockeId){
         Tocke t = (Tocke) em.createNamedQuery("Tocke.getById").setParameter("id", tockeId).getResultList().get(0);

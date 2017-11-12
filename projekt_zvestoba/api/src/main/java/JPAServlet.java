@@ -21,7 +21,6 @@ public class JPAServlet extends HttpServlet {
     private StoritveZrno storitveZrno;
 
 
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws SecurityException, IOException {
 
