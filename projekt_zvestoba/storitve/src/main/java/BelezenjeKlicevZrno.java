@@ -1,12 +1,11 @@
 import javax.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
-@BeleziKlice
 public class BelezenjeKlicevZrno {
     private int stKlicev = 0;
 
-    public void izvedenKlic() {
+    public int izvedenKlic() {
         stKlicev++;
-        System.out.println(stKlicev);
+        return stKlicev;
     }
 }

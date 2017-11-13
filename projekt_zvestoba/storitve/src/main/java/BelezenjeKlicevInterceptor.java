@@ -1,14 +1,19 @@
+import javax.annotation.Resource;
+import javax.inject.Inject;
 import javax.interceptor.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 @Interceptor
 @BeleziKlice
 public class BelezenjeKlicevInterceptor {
-    BelezenjeKlicevZrno BKzrno = new BelezenjeKlicevZrno();
+    @Inject
+    private BelezenjeKlicevZrno belezenjeKlicevZrno;
+    Logger logger = Logger.getLogger(BelezenjeKlicevInterceptor.class.getName());
     @AroundInvoke
     public Object zabeleziKlic(InvocationContext context) throws Exception {
-
-        BKzrno.izvedenKlic();
-
+        // implementacija
+        logger.info("Belezi klic: " + belezenjeKlicevZrno.izvedenKlic());
         return context.proceed();
     }
 }
