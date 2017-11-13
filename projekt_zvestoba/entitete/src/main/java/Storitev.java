@@ -10,6 +10,8 @@ import javax.persistence.*;
                         query = "SELECT s FROM storitev s where s.ponudnikId = :pid"),
                 @NamedQuery(name = "Storitev.getTopStoritve",
                         query = "SELECT s FROM storitev s where s.tocke > :tocke ORDER BY s.tocke"),
+                @NamedQuery(name = "Storitev.getById",
+                        query = "SELECT s FROM storitev s where s.storitevId = :id")
         })
 public class Storitev {
 
@@ -77,5 +79,9 @@ public class Storitev {
 
     public void setUporabnik(Uporabnik uporabnik) {
         this.uporabnik = uporabnik;
+    }
+
+    public String tostring() {
+        return "ID:" + storitevId.toString() + ", KAJ:" + naziv + ", KAKO:" + opis + " KDO:" + uporabnik.tostring();
     }
 }

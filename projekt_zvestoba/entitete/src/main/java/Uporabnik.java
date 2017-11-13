@@ -10,6 +10,7 @@ import javax.persistence.*;
                         query="SELECT u FROM uporabnik u WHERE u.id = :id"),
                 @NamedQuery(name="Uporabnik.getNew",
                         query="SELECT u FROM uporabnik u WHERE u.id > :id")
+
         })
 public class Uporabnik {
     @Id
@@ -64,5 +65,9 @@ public class Uporabnik {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String tostring() {
+        return getIme() + " " + getPriimek() + " " + getUporabnisko_ime() + "  " + getEmail() + " " + getId();
     }
 }

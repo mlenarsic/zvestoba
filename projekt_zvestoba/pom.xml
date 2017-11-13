@@ -16,17 +16,5 @@
         <module>entitete</module>
     </modules>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>com.kumuluz.ee</groupId>
-                <artifactId>kumuluzee-bom</artifactId>
-                <version>2.4.1</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
 
 </project>
