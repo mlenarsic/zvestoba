@@ -68,6 +68,6 @@ public class Uporabnik {
     }
 
     public String tostring() {
-        return getIme() + " " + getPriimek() + " " + getId();
+        return getIme() + " " + getPriimek() + " " + getUporabnisko_ime() + "  " + getEmail() + " " + getId();
     }
 }

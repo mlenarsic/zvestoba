@@ -1,12 +1,22 @@
+import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
 import javax.persistence.*;
 import javax.transaction.Transactional;
 import java.util.*;
+import java.util.logging.Logger;
+
 @ApplicationScoped
 public class StoritveZrno {
 
     @PersistenceContext(unitName = "zvestoba-jpa")
     private EntityManager em;
+
+    private Logger log = Logger.getLogger(StoritveZrno.class.getName());
+
+    @PostConstruct
+    private void init() {
+        log.info("Inicializirano");
+    }
 
     @BeleziKlice
     public List<Storitev> pridobiStoritve() {
@@ -36,9 +46,8 @@ public class StoritveZrno {
     @BeleziKlice
     @Transactional
     public void posodobiStoritev(int sId, Storitev s){
-        odstraniStoritev(s.getStoritevId());
         s.setStoritevId(sId);
-        dodajStoritev(s);
+        em.merge(s);
     }
     @BeleziKlice
     @Transactional

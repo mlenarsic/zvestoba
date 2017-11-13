@@ -40,9 +40,9 @@ public class JPAServlet extends HttpServlet {
         writer.append("\n");
 
         //dodaj novo storitev nekemu uporabniku
-        Uporabnik u = uporabnikiZrno.pridobiUporabnika(4);
-        String opis = "Posilil je Mayweatherja 26. augusta";
-        String naziv = "Zmaga";
+        Uporabnik u = uporabnikiZrno.pridobiUporabnika(3);
+        String opis = "Zgubil je proti Mayweatherju 26. augusta";
+        String naziv = "Zguba";
         dodajNovoStoritev(opis, naziv,1,1000000000,u);
         printStoritve(writer);
         writer.append("\n");
@@ -51,11 +51,18 @@ public class JPAServlet extends HttpServlet {
         printStoritevWithId(3,writer);
         writer.append("\n");
 
-        //posodobi storitev z id-jem 3 na 4 in sprintaj storitev z id-jem 4
-        Storitev s = storitveZrno.pridobiStoritev(3);
-        storitveZrno.posodobiStoritev(4,s);
-        printStoritevWithId(4,writer);
+        //posodobi storitev z id-jem 3
+        Storitev s = new Storitev();
+        u = uporabnikiZrno.pridobiUporabnika(3);
+        s.setTocke(1000000);
+        s.setUporabnik(u);
+        s.setPonudnikId(3);
+        s.setNaziv("Lezi");
+        s.setOpis("Lezi na travniku na in se pogovarja s svizcem");
+        storitveZrno.posodobiStoritev(3, s);
+        printStoritevWithId(3,writer);
         writer.append("\n");
+
 
         //še enkrat sprintaj vse storitve
         printStoritve(writer);
@@ -76,6 +83,7 @@ public class JPAServlet extends HttpServlet {
         Storitev s = storitveZrno.pridobiStoritev(id);
         writer.append(s.tostring());
         writer.append("\n");
+
     }
 
     public void dodajNovoStoritev(String opis, String naziv, int ponudnik_id, int tocke, Uporabnik u ){
@@ -96,7 +104,7 @@ public class JPAServlet extends HttpServlet {
         writer.append("\n");
 
         //dodaj nove tocke v smislu da se doda nova kartica in potem sprintaj vse tocke
-        Uporabnik u = uporabnikiZrno.pridobiUporabnika(4);
+        Uporabnik u = uporabnikiZrno.pridobiUporabnika(3);
         dodajNovoTocko(3,2,u);
         printTocke(writer);
         writer.append("\n");
@@ -105,10 +113,14 @@ public class JPAServlet extends HttpServlet {
         printTockeWithId(3,writer);
         writer.append("\n");
 
-        //posodobi tocke z id-jem 3 na 4 in sprintaj tocko z id-jem 4
-        Tocke t = tockeZrno.pridobiTocko(3);
-        tockeZrno.posodobiTocko(4,t);
-        printTockeWithId(4,writer);
+        //posodobi tocke z id-jem 3
+        Tocke t = new Tocke();
+        u = uporabnikiZrno.pridobiUporabnika(2);
+        t.setPonudnik_id(7);
+        t.setUporabnik(u);
+        t.setZbrane_tocke(100);
+        tockeZrno.posodobiTocko(3,t);
+        printTockeWithId(3,writer);
         writer.append("\n");
 
         //še enkrat sprintaj vse tocke
@@ -157,9 +169,13 @@ public class JPAServlet extends HttpServlet {
         writer.append("\n");
 
         //posodobi uporabnika z id-jem 3 na 4 in sprintaj uporabnika z id-jem 4
-        Uporabnik u = uporabnikiZrno.pridobiUporabnika(3);
-        uporabnikiZrno.posodobiUporabnika(4,u);
-        printUporabnikWithId(4,writer);
+        Uporabnik u = new Uporabnik();
+        u.setIme("Krava");
+        u.setPriimek("Milka");
+        u.setEmail("krava@milka.mu");
+        u.setUporabnisko_ime("krava_milka");
+        uporabnikiZrno.posodobiUporabnika(3,u);
+        printUporabnikWithId(3,writer);
         writer.append("\n");
 
         //še enkrat sprintaj vse uporabnike
@@ -178,6 +194,8 @@ public class JPAServlet extends HttpServlet {
 
         Uporabnik u = uporabnikiZrno.pridobiUporabnika(id);
         writer.append(u.tostring());
+        writer.append("\n");
+
     }
 
     public void dodajNovegaUporabnika(String ime, String priimek, String email, String username){

@@ -62,6 +62,6 @@ public class Tocke {
     }
 
     public String tostring() {
-        return id_kartice.toString() + ", " + ponudnik_id.toString() + ", " + uporabnik.tostring();
+        return id_kartice.toString() + ", " + ponudnik_id.toString() + ", " + uporabnik.tostring() + ", " + zbrane_tocke.toString();
     }
 }

@@ -1,12 +1,22 @@
+import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
 import javax.persistence.*;
 import javax.transaction.*;
 import java.util.*;
+import java.util.logging.Logger;
+
 @ApplicationScoped
 public class UporabnikiZrno {
 
     @PersistenceContext(unitName = "zvestoba-jpa")
     private EntityManager em;
+
+    private Logger log = Logger.getLogger(UporabnikiZrno.class.getName());
+
+    @PostConstruct
+    private void init() {
+        log.info("Inicializirano");
+    }
 
     @BeleziKlice
     public List<Uporabnik> pridobiUporabnike() {
@@ -37,9 +47,8 @@ public class UporabnikiZrno {
     @BeleziKlice
     @Transactional
     public void posodobiUporabnika(int uporabnikId, Uporabnik uporabnik) {
-        odstraniUporabnika(uporabnik.getId());
         uporabnik.setId(uporabnikId);
-        dodajUporabnika(uporabnik);
+        em.merge(uporabnik);
     }
 
     @BeleziKlice

@@ -1,12 +1,22 @@
+import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
 import javax.persistence.*;
 import javax.transaction.Transactional;
 import java.util.*;
+import java.util.logging.Logger;
+
 @ApplicationScoped
 public class TockeZrno {
 
     @PersistenceContext(unitName = "zvestoba-jpa")
     private EntityManager em;
+
+    private Logger log = Logger.getLogger(TockeZrno.class.getName());
+
+    @PostConstruct
+    private void init() {
+        log.info("Inicializirano");
+    }
 
     @BeleziKlice
     public List<Tocke> pridobiTocke() {
@@ -36,9 +46,8 @@ public class TockeZrno {
     @BeleziKlice
     @Transactional
     public void posodobiTocko(int tockeId, Tocke t){
-        odstraniTocko(t.getId_kartice());
         t.setId_kartice(tockeId);
-        dodajTocko(t);
+        em.merge(t);
     }
     @BeleziKlice
     @Transactional
