@@ -12,7 +12,10 @@ import javax.persistence.*;
                         query = "SELECT t FROM tocke t where t.ponudnik_id = :pid " +
                                 "and t.zbrane_tocke > :tocke order by t.zbrane_tocke"),
                 @NamedQuery(name = "Tocke.getById",
-                        query = "SELECT t FROM tocke t where t.id_kartice = :id ")
+                        query = "SELECT t FROM tocke t where t.id_kartice = :id "),
+                @NamedQuery(name = "Tocke.getByUporabnikAndPonudnikId",
+                        query = "SELECT t FROM tocke t where t.ponudnik_id = :pid " +
+                            "and t.uporabnik = :u")
         })
 public class Tocke {
 
@@ -62,6 +65,6 @@ public class Tocke {
     }
 
     public String tostring() {
-        return id_kartice.toString() + ", " + ponudnik_id.toString() + ", " + uporabnik.tostring() + ", " + zbrane_tocke.toString();
+        return "TOCKA: " + "ID:" + id_kartice.toString() + ", PID:" + ponudnik_id.toString() + ", UPORABNIK:" + uporabnik.tostring() + ", STEVILO TOCK:" + zbrane_tocke.toString();
     }
 }

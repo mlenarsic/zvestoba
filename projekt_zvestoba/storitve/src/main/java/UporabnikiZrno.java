@@ -22,22 +22,27 @@ public class UporabnikiZrno {
     public List<Uporabnik> pridobiUporabnike() {
         Query q = em.createNamedQuery("Uporabnik.getAll");
         List rl = q.getResultList();
-        List<Uporabnik> uporabniki = new LinkedList<Uporabnik>();
-        for(int i = 0; i < rl.size(); i++){
-            Uporabnik u = (Uporabnik)rl.get(i);
-            uporabniki.add((Uporabnik)rl.get(i));
+        if (rl.isEmpty()) {
+            return null;
+        } else {
+            List<Uporabnik> uporabniki = new LinkedList<Uporabnik>();
+            for (int i = 0; i < rl.size(); i++) {
+                uporabniki.add((Uporabnik) rl.get(i));
+            }
+            return uporabniki;
         }
-        return uporabniki;
     }
 
     @BeleziKlice
     public Uporabnik pridobiUporabnika(int uporabnikId) {
-        Query q = em.createNamedQuery("Uporabnik.getById").setParameter("id",uporabnikId);
+        Query q = em.createNamedQuery("Uporabnik.getById").setParameter("id", uporabnikId);
         List rl = q.getResultList();
-        Uporabnik u = (Uporabnik) rl.get(0);
-        return (Uporabnik)rl.get(0);
+        if (rl.isEmpty()) {
+            return null;
+        } else {
+            return (Uporabnik) rl.get(0);
+        }
     }
-
     @BeleziKlice
     @Transactional
     public void dodajUporabnika(Uporabnik uporabnik) {
