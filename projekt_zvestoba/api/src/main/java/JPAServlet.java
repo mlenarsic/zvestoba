@@ -1,8 +1,11 @@
+import jdk.nashorn.internal.ir.debug.JSONWriter;
+
 import javax.inject.Inject;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.ws.rs.core.Response;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.Writer;
@@ -12,7 +15,8 @@ import java.util.List;
 public class JPAServlet extends HttpServlet {
 
     @Inject
-    private UpravljanjeZvestobeZrno uzz;
+    private UporabnikiVir uv;
+
 
 
     @Override
@@ -21,7 +25,13 @@ public class JPAServlet extends HttpServlet {
         PrintWriter writer = resp.getWriter();
         writer.append("Hello world\n");
 
+        testPet(writer);
 
+    }
+
+    public void testPet (PrintWriter writer) {
+        writer.append(uv.vrniUporabnike().getEntity() + "\n");
+        writer.append(uv.vrniUporabnike().getEntity() + "\n");
     }
 
 

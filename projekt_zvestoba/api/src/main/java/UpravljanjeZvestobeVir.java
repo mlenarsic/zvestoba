@@ -20,10 +20,12 @@ public class UpravljanjeZvestobeVir {
         return Response.status(Response.Status.OK).build();
 
     }
+    /*
     @Path("{id}")
     @PUT
-    public Response koristenjeTock(@PathParam("id") Integer id, Uporabnik uporabnik, int stevilo) {
+    public Response koristenjeTock(@PathParam("id") Integer id, Uporabnik uporabnik, Integer stevilo) {
         uzBean.koristiTocke(uporabnik, id, stevilo);
         return Response.status(Response.Status.OK).build();
     }
+    */
 }
