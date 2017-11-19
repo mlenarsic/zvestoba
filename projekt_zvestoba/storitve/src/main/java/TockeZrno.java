@@ -26,13 +26,6 @@ public class TockeZrno {
             return null;
         } else {
             return (List<Tocke>) (rl);
-            /*
-            List<Tocke> tocke = new LinkedList<Tocke>();
-            for(int i = 0; i < rl.size(); i++){
-                tocke.add((Tocke)rl.get(i));
-            }
-            return tocke;
-            */
         }
     }
 
@@ -53,11 +46,7 @@ public class TockeZrno {
         if(rl.isEmpty()){
             return null;
         } else {
-            List<Tocke> tockeU = new LinkedList<Tocke>();
-            for (int i = 0; i < rl.size(); i++) {
-                tockeU.add((Tocke) rl.get(i));
-            }
-            return tockeU;
+            return  (List<Tocke>) (rl);
         }
     }
 

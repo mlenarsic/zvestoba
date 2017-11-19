@@ -26,13 +26,6 @@ public class StoritveZrno {
             return null;
         } else {
             return (List<Storitev>) (rl);
-            /*
-            List<Storitev> storitve = new LinkedList<Storitev>();
-            for (int i = 0; i < rl.size(); i++) {
-                storitve.add((Storitev) rl.get(i));
-            }
-            return storitve;
-            */
         }
     }
 

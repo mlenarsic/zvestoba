@@ -26,13 +26,6 @@ public class UporabnikiZrno {
             return null;
         } else {
             return (List<Uporabnik>) (rl);
-            /*
-            List<Uporabnik> uporabniki =  (List<Uporabnik>) rl;
-            for (int i = 0; i < rl.size(); i++) {
-                uporabniki.add((Uporabnik) rl.get(i));
-            }
-            return (List<Uporabnik>) rl;
-            */
         }
     }
 
