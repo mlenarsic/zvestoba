@@ -25,23 +25,24 @@ public class TockeZrno {
         if(rl.isEmpty()){
             return null;
         } else {
+            return (List<Tocke>) (rl);
+            /*
             List<Tocke> tocke = new LinkedList<Tocke>();
             for(int i = 0; i < rl.size(); i++){
                 tocke.add((Tocke)rl.get(i));
             }
             return tocke;
+            */
         }
     }
 
     @BeleziKlice
     public Tocke pridobiTocko(int tockeId) {
-        Query q = em.createNamedQuery("Tocke.getById").setParameter("id",tockeId);
-        List rl = q.getResultList();
-        if(rl.isEmpty()){
+        try {
+            return em.getReference(Tocke.class, tockeId);
+        } catch (EntityNotFoundException e){
+            e.printStackTrace();
             return null;
-        } else {
-            Tocke t = (Tocke) rl.get(0);
-            return t;
         }
     }
 
@@ -75,7 +76,11 @@ public class TockeZrno {
     @BeleziKlice
     @Transactional
     public void dodajTocko(Tocke t) {
-        em.persist(t);
+        try {
+            em.persist(t);
+        } catch (EntityExistsException e){
+            e.printStackTrace();
+        }
     }
 
     @BeleziKlice
@@ -87,7 +92,9 @@ public class TockeZrno {
     @BeleziKlice
     @Transactional
     public void odstraniTocko(int tockeId){
-        Tocke t = (Tocke) em.createNamedQuery("Tocke.getById").setParameter("id", tockeId).getResultList().get(0);
-        em.remove(t);
+        Tocke t = pridobiTocko(tockeId);
+        if(t != null){
+            em.remove(t);
+        }
     }
 }

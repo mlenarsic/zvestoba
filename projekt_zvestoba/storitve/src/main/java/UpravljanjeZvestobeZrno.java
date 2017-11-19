@@ -77,9 +77,7 @@ public class UpravljanjeZvestobeZrno {
         return tz.pridobiTocke();
     }
 
-    public List<Storitev> vrniStoritve(){
-        return sz.pridobiStoritve();
-    }
+    public List<Storitev> vrniStoritve(){ return sz.pridobiStoritve(); }
 
     public void koristiTocke(Uporabnik u, int pid, int st){
         Tocke t = tz.pridobiTocko(u,pid);

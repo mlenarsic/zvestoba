@@ -25,29 +25,35 @@ public class StoritveZrno {
         if(rl.isEmpty()){
             return null;
         } else {
+            return (List<Storitev>) (rl);
+            /*
             List<Storitev> storitve = new LinkedList<Storitev>();
             for (int i = 0; i < rl.size(); i++) {
                 storitve.add((Storitev) rl.get(i));
             }
             return storitve;
+            */
         }
     }
 
     @BeleziKlice
     public Storitev pridobiStoritev(int sId) {
-        Query q = em.createNamedQuery("Storitev.getById").setParameter("id",sId);
-        List rl = q.getResultList();
-        if(rl.isEmpty()){
+        try {
+            return em.getReference(Storitev.class, sId);
+        } catch (EntityNotFoundException e){
+            e.printStackTrace();
             return null;
-        } else {
-            return (Storitev) rl.get(0);
         }
     }
 
     @BeleziKlice
     @Transactional
     public void dodajStoritev(Storitev s) {
-        em.persist(s);
+        try {
+            em.persist(s);
+        } catch (EntityExistsException e){
+            e.printStackTrace();
+        }
     }
 
     @BeleziKlice
@@ -59,7 +65,10 @@ public class StoritveZrno {
     @BeleziKlice
     @Transactional
     public void odstraniStoritev(int sId){
-        Storitev s = (Storitev) em.createNamedQuery("Storitev.getById").setParameter("id", sId).getResultList().get(0);
-        em.remove(s);
+        Storitev s = pridobiStoritev(sId);
+        if(s != null){
+            em.remove(s);
+        }
+
     }
 }
