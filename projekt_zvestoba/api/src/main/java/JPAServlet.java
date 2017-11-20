@@ -31,7 +31,6 @@ public class JPAServlet extends HttpServlet {
 
     public void testPet (PrintWriter writer) {
         writer.append(uv.vrniUporabnike().getEntity() + "\n");
-        writer.append(uv.vrniUporabnike().getEntity() + "\n");
     }
 
 
