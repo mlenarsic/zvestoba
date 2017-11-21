@@ -22,25 +22,54 @@ public class TockeZrno {
     public List<Tocke> pridobiTocke() {
         Query q = em.createNamedQuery("Tocke.getAll");
         List rl = q.getResultList();
-        List<Tocke> tocke = new LinkedList<Tocke>();
-        for(int i = 0; i < rl.size(); i++){
-            tocke.add((Tocke)rl.get(i));
+        if(rl.isEmpty()){
+            return null;
+        } else {
+            return (List<Tocke>) (rl);
         }
-        return tocke;
     }
 
     @BeleziKlice
     public Tocke pridobiTocko(int tockeId) {
-        Query q = em.createNamedQuery("Tocke.getById").setParameter("id",tockeId);
+        try {
+            return em.getReference(Tocke.class, tockeId);
+        } catch (EntityNotFoundException e){
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    @BeleziKlice
+    public List<Tocke> pridobiTocke(Uporabnik u) {
+        Query q = em.createNamedQuery("Tocke.getByUporabnik").setParameter("uporabnik",u);
         List rl = q.getResultList();
-        Tocke t = (Tocke) rl.get(0);
-        return t;
+        if(rl.isEmpty()){
+            return null;
+        } else {
+            return  (List<Tocke>) (rl);
+        }
+    }
+
+    @BeleziKlice
+    public Tocke pridobiTocko(Uporabnik u, int ponudnik_id) {
+        Query q = em.createNamedQuery("Tocke.getByUporabnikAndPonudnikId").setParameter("pid",ponudnik_id)
+                    .setParameter("u",u);
+        List rl = q.getResultList();
+        if(rl.isEmpty()){
+            return null;
+        } else {
+            return (Tocke) rl.get(0);
+        }
     }
 
     @BeleziKlice
     @Transactional
     public void dodajTocko(Tocke t) {
-        em.persist(t);
+        try {
+            em.persist(t);
+        } catch (EntityExistsException e){
+            e.printStackTrace();
+        }
     }
 
     @BeleziKlice
@@ -52,7 +81,9 @@ public class TockeZrno {
     @BeleziKlice
     @Transactional
     public void odstraniTocko(int tockeId){
-        Tocke t = (Tocke) em.createNamedQuery("Tocke.getById").setParameter("id", tockeId).getResultList().get(0);
-        em.remove(t);
+        Tocke t = pridobiTocko(tockeId);
+        if(t != null){
+            em.remove(t);
+        }
     }
 }

@@ -12,8 +12,8 @@
     </database>
     <schema id="4" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2017-11-07.20:04:58.439</IntrospectionTimestamp>
-      <IntrospectionStateNumber>728</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2017-11-19.21:52:40.732</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1436</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -33,189 +33,163 @@
       <ObjectId>12703</ObjectId>
     </schema>
     <sequence id="10" parent="4" name="storitev_storitevid_seq">
-      <ObjectId>57345</ObjectId>
-      <StateNumber>724</StateNumber>
+      <ObjectId>58335</ObjectId>
+      <StateNumber>1432</StateNumber>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
     <sequence id="11" parent="4" name="tocke_id_kartice_seq">
-      <ObjectId>57356</ObjectId>
-      <StateNumber>725</StateNumber>
+      <ObjectId>58346</ObjectId>
+      <StateNumber>1433</StateNumber>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
     <sequence id="12" parent="4" name="uporabnik_id_seq">
-      <ObjectId>57364</ObjectId>
-      <StateNumber>726</StateNumber>
+      <ObjectId>58354</ObjectId>
+      <StateNumber>1434</StateNumber>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
-    <table id="13" parent="4" name="sequence">
-      <ObjectId>49190</ObjectId>
-      <StateNumber>663</StateNumber>
+    <table id="13" parent="4" name="storitev">
+      <ObjectId>58337</ObjectId>
+      <StateNumber>1435</StateNumber>
     </table>
-    <table id="14" parent="4" name="storitev">
-      <ObjectId>57347</ObjectId>
-      <StateNumber>727</StateNumber>
+    <table id="14" parent="4" name="tocke">
+      <ObjectId>58348</ObjectId>
+      <StateNumber>1436</StateNumber>
     </table>
-    <table id="15" parent="4" name="tocke">
-      <ObjectId>57358</ObjectId>
-      <StateNumber>728</StateNumber>
+    <table id="15" parent="4" name="uporabnik">
+      <ObjectId>58356</ObjectId>
+      <StateNumber>1436</StateNumber>
     </table>
-    <table id="16" parent="4" name="uporabnik">
-      <ObjectId>57366</ObjectId>
-      <StateNumber>728</StateNumber>
-    </table>
-    <column id="17" parent="13" name="seq_name">
-      <Position>1</Position>
-      <DataType>varchar(50)|0</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>663</StateNumber>
-    </column>
-    <column id="18" parent="13" name="seq_count">
-      <Position>2</Position>
-      <DataType>numeric(38)|0</DataType>
-      <StateNumber>663</StateNumber>
-    </column>
-    <index id="19" parent="13" name="sequence_pkey">
-      <ObjectId>49193</ObjectId>
-      <ColNames>seq_name</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <key id="20" parent="13" name="sequence_pkey">
-      <ObjectId>49194</ObjectId>
-      <ColNames>seq_name</ColNames>
-      <UnderlyingIndexName>sequence_pkey</UnderlyingIndexName>
-      <Primary>1</Primary>
-    </key>
-    <column id="21" parent="14" name="storitevid">
+    <column id="16" parent="13" name="storitevid">
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>724</StateNumber>
+      <StateNumber>1432</StateNumber>
       <SequenceName>storitev_storitevid_seq</SequenceName>
       <DefaultExpression>nextval(&apos;storitev_storitevid_seq&apos;::regclass)</DefaultExpression>
     </column>
-    <column id="22" parent="14" name="naziv">
+    <column id="17" parent="13" name="naziv">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
-      <StateNumber>724</StateNumber>
+      <StateNumber>1432</StateNumber>
     </column>
-    <column id="23" parent="14" name="opis">
+    <column id="18" parent="13" name="opis">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
-      <StateNumber>724</StateNumber>
+      <StateNumber>1432</StateNumber>
     </column>
-    <column id="24" parent="14" name="ponudnikid">
+    <column id="19" parent="13" name="ponudnikid">
       <Position>4</Position>
       <DataType>integer|0</DataType>
-      <StateNumber>724</StateNumber>
+      <StateNumber>1432</StateNumber>
     </column>
-    <column id="25" parent="14" name="tocke">
+    <column id="20" parent="13" name="tocke">
       <Position>5</Position>
       <DataType>integer|0</DataType>
-      <StateNumber>724</StateNumber>
+      <StateNumber>1432</StateNumber>
     </column>
-    <column id="26" parent="14" name="id">
+    <column id="21" parent="13" name="id">
       <Position>6</Position>
       <DataType>integer|0</DataType>
-      <StateNumber>724</StateNumber>
+      <StateNumber>1432</StateNumber>
     </column>
-    <index id="27" parent="14" name="storitev_pkey">
-      <ObjectId>57354</ObjectId>
+    <index id="22" parent="13" name="storitev_pkey">
+      <ObjectId>58344</ObjectId>
       <ColNames>storitevid</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="28" parent="14" name="storitev_pkey">
-      <ObjectId>57355</ObjectId>
+    <key id="23" parent="13" name="storitev_pkey">
+      <ObjectId>58345</ObjectId>
       <ColNames>storitevid</ColNames>
       <UnderlyingIndexName>storitev_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="29" parent="14" name="fk_storitev_id">
-      <ObjectId>57375</ObjectId>
+    <foreign-key id="24" parent="13" name="fk_storitev_id">
+      <ObjectId>58365</ObjectId>
       <ColNames>id</ColNames>
-      <RefTableId>57366</RefTableId>
+      <RefTableId>58356</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>uporabnik</RefTableName>
       <RefKeyName>uporabnik_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="30" parent="15" name="id_kartice">
+    <column id="25" parent="14" name="id_kartice">
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>725</StateNumber>
+      <StateNumber>1433</StateNumber>
       <SequenceName>tocke_id_kartice_seq</SequenceName>
       <DefaultExpression>nextval(&apos;tocke_id_kartice_seq&apos;::regclass)</DefaultExpression>
     </column>
-    <column id="31" parent="15" name="ponudnik_id">
+    <column id="26" parent="14" name="ponudnik_id">
       <Position>2</Position>
       <DataType>integer|0</DataType>
-      <StateNumber>725</StateNumber>
+      <StateNumber>1433</StateNumber>
     </column>
-    <column id="32" parent="15" name="zbrane_tocke">
+    <column id="27" parent="14" name="zbrane_tocke">
       <Position>3</Position>
       <DataType>integer|0</DataType>
-      <StateNumber>725</StateNumber>
+      <StateNumber>1433</StateNumber>
     </column>
-    <column id="33" parent="15" name="id">
+    <column id="28" parent="14" name="id">
       <Position>4</Position>
       <DataType>integer|0</DataType>
-      <StateNumber>725</StateNumber>
+      <StateNumber>1433</StateNumber>
     </column>
-    <index id="34" parent="15" name="tocke_pkey">
-      <ObjectId>57362</ObjectId>
+    <index id="29" parent="14" name="tocke_pkey">
+      <ObjectId>58352</ObjectId>
       <ColNames>id_kartice</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="35" parent="15" name="tocke_pkey">
-      <ObjectId>57363</ObjectId>
+    <key id="30" parent="14" name="tocke_pkey">
+      <ObjectId>58353</ObjectId>
       <ColNames>id_kartice</ColNames>
       <UnderlyingIndexName>tocke_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="36" parent="15" name="fk_tocke_id">
-      <ObjectId>57380</ObjectId>
+    <foreign-key id="31" parent="14" name="fk_tocke_id">
+      <ObjectId>58370</ObjectId>
       <ColNames>id</ColNames>
-      <RefTableId>57366</RefTableId>
+      <RefTableId>58356</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>uporabnik</RefTableName>
       <RefKeyName>uporabnik_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="37" parent="16" name="id">
+    <column id="32" parent="15" name="id">
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>726</StateNumber>
+      <StateNumber>1434</StateNumber>
       <SequenceName>uporabnik_id_seq</SequenceName>
       <DefaultExpression>nextval(&apos;uporabnik_id_seq&apos;::regclass)</DefaultExpression>
     </column>
-    <column id="38" parent="16" name="email">
+    <column id="33" parent="15" name="email">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
-      <StateNumber>726</StateNumber>
+      <StateNumber>1434</StateNumber>
     </column>
-    <column id="39" parent="16" name="ime">
+    <column id="34" parent="15" name="ime">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
-      <StateNumber>726</StateNumber>
+      <StateNumber>1434</StateNumber>
     </column>
-    <column id="40" parent="16" name="priimek">
+    <column id="35" parent="15" name="priimek">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
-      <StateNumber>726</StateNumber>
+      <StateNumber>1434</StateNumber>
     </column>
-    <column id="41" parent="16" name="uporabnisko_ime">
+    <column id="36" parent="15" name="uporabnisko_ime">
       <Position>5</Position>
       <DataType>varchar(255)|0</DataType>
-      <StateNumber>726</StateNumber>
+      <StateNumber>1434</StateNumber>
     </column>
-    <index id="42" parent="16" name="uporabnik_pkey">
-      <ObjectId>57373</ObjectId>
+    <index id="37" parent="15" name="uporabnik_pkey">
+      <ObjectId>58363</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="43" parent="16" name="uporabnik_pkey">
-      <ObjectId>57374</ObjectId>
+    <key id="38" parent="15" name="uporabnik_pkey">
+      <ObjectId>58364</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>uporabnik_pkey</UnderlyingIndexName>
       <Primary>1</Primary>

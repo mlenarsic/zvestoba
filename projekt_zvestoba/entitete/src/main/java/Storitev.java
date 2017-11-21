@@ -82,6 +82,7 @@ public class Storitev {
     }
 
     public String tostring() {
-        return "ID:" + storitevId.toString() + ", KAJ:" + naziv + ", KAKO:" + opis + " KDO:" + uporabnik.tostring();
+        return "STORITEV:" + "ID:" + storitevId.toString() + ", KAJ:" + naziv + ", KAKO:" + opis + " KDO:" + uporabnik.tostring() +
+                ", KJE:" + getPonudnikId() + ", KOLIKO TOCK:" + getTocke();
     }
 }

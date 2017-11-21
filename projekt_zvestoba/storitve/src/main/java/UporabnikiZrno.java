@@ -22,26 +22,30 @@ public class UporabnikiZrno {
     public List<Uporabnik> pridobiUporabnike() {
         Query q = em.createNamedQuery("Uporabnik.getAll");
         List rl = q.getResultList();
-        List<Uporabnik> uporabniki = new LinkedList<Uporabnik>();
-        for(int i = 0; i < rl.size(); i++){
-            Uporabnik u = (Uporabnik)rl.get(i);
-            uporabniki.add((Uporabnik)rl.get(i));
+        if (rl.isEmpty()) {
+            return null;
+        } else {
+            return (List<Uporabnik>) (rl);
         }
-        return uporabniki;
     }
 
     @BeleziKlice
     public Uporabnik pridobiUporabnika(int uporabnikId) {
-        Query q = em.createNamedQuery("Uporabnik.getById").setParameter("id",uporabnikId);
-        List rl = q.getResultList();
-        Uporabnik u = (Uporabnik) rl.get(0);
-        return (Uporabnik)rl.get(0);
+        try {
+            return em.getReference(Uporabnik.class, uporabnikId);
+        } catch (EntityNotFoundException e){
+            e.printStackTrace();
+            return null;
+        }
     }
-
     @BeleziKlice
     @Transactional
     public void dodajUporabnika(Uporabnik uporabnik) {
-        em.persist(uporabnik);
+        try {
+            em.persist(uporabnik);
+        } catch (EntityExistsException e){
+            e.printStackTrace();
+        }
     }
 
     @BeleziKlice
@@ -54,8 +58,10 @@ public class UporabnikiZrno {
     @BeleziKlice
     @Transactional
     public void odstraniUporabnika(int uporabnikId) {
-        Uporabnik u = (Uporabnik) em.createNamedQuery("Uporabnik.getById").setParameter("id", uporabnikId).getResultList().get(0);
-        em.remove(u);
+        Uporabnik u = pridobiUporabnika(uporabnikId);
+        if(u != null){
+            em.remove(u);
+        }
     }
 
 }
