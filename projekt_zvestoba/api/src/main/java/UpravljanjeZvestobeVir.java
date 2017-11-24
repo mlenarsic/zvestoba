@@ -13,19 +13,19 @@ public class UpravljanjeZvestobeVir {
     private UpravljanjeZvestobeZrno uzBean;
 
     @Path("{id}")
-    @PUT
+    @POST
     public Response opravljenaStoritev(@PathParam("id") Integer id, Storitev storitev) {
 
         uzBean.dodajTockeZaOpravljenoStoritev(storitev);
         return Response.status(Response.Status.OK).build();
 
     }
-    /*
+
     @Path("{id}")
     @PUT
-    public Response koristenjeTock(@PathParam("id") Integer id, Uporabnik uporabnik, Integer stevilo) {
-        uzBean.koristiTocke(uporabnik, id, stevilo);
+    public Response koristenjeTock(@PathParam("id") Integer id, Integer pid) {
+        uzBean.koristiTocke(id, pid);
         return Response.status(Response.Status.OK).build();
     }
-    */
+
 }

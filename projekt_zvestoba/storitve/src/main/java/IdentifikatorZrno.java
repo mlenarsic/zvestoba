@@ -3,7 +3,7 @@ import javax.enterprise.context.*;
 import java.util.Random;
 import java.util.logging.Logger;
 
-@ApplicationScoped
+@RequestScoped
 public class IdentifikatorZrno {
     private int identifikator;
 
