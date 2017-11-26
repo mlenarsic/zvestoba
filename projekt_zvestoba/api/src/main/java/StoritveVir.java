@@ -1,4 +1,6 @@
 
+import com.kumuluz.ee.rest.beans.QueryParameters;
+
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.ws.rs.*;
@@ -14,10 +16,14 @@ public class StoritveVir {
     @Inject
     private StoritveZrno sBean;
 
+    @Context
+    protected UriInfo uriInfo;
+
     @GET
     public Response vrniStoritve(){
 
-        List<Storitev> storitve  = sBean.pridobiStoritve();
+        QueryParameters query = QueryParameters.query(uriInfo.getRequestUri().getQuery()).build();
+        List<Storitev> storitve = sBean.pridobiStoritve(query);
         return Response.status(Response.Status.OK).entity(storitve).build();
 
     }

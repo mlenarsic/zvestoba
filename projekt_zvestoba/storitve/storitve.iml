@@ -40,6 +40,7 @@
     <orderEntry type="library" name="Maven: org.jboss:jboss-transaction-spi:7.6.0.Final" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.narayana.jta:narayana-jta:5.6.4.Final" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.spec.javax.resource:jboss-connector-api_1.7_spec:1.0.0.Final" level="project" />
+    <orderEntry type="library" name="Maven: com.kumuluz.ee.rest:kumuluzee-rest-core:1.1.0" level="project" />
     <orderEntry type="module" module-name="entitete" />
     <orderEntry type="library" name="Maven: com.kumuluz.ee:kumuluzee-jpa-eclipselink:2.4.1" level="project" />
     <orderEntry type="library" name="Maven: com.kumuluz.ee:kumuluzee-jpa-common:2.4.1" level="project" />

@@ -1,4 +1,6 @@
 
+import com.kumuluz.ee.rest.beans.QueryParameters;
+
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.ws.rs.*;
@@ -14,10 +16,14 @@ public class TockeVir {
     @Inject
     private TockeZrno tBean;
 
+    @Context
+    protected UriInfo uriInfo;
+
     @GET
     public Response vrniTocke(){
 
-        List<Tocke> tocke  = tBean.pridobiTocke();
+        QueryParameters query = QueryParameters.query(uriInfo.getRequestUri().getQuery()).build();
+        List<Tocke> tocke = tBean.pridobiTocke(query);
         return Response.status(Response.Status.OK).entity(tocke).build();
 
     }

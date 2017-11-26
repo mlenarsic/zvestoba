@@ -32,7 +32,7 @@ public class JPAServlet extends HttpServlet {
     public void testPet (PrintWriter writer) {
         //Uporabnik uporabnik = uv.vrniUporabnika(1).getEntity();
 
-        writer.append(uv.vrniUporabnike().getEntity() + "\n");
+        // writer.append(uv.vrniUporabnike().getEntity() + "\n");
     }
 
 

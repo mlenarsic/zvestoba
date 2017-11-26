@@ -1,3 +1,6 @@
+import com.kumuluz.ee.rest.beans.QueryParameters;
+import com.kumuluz.ee.rest.utils.JPAUtils;
+
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
 import javax.persistence.*;
@@ -19,14 +22,9 @@ public class UporabnikiZrno {
     }
 
     @BeleziKlice
-    public List<Uporabnik> pridobiUporabnike() {
-        Query q = em.createNamedQuery("Uporabnik.getAll");
-        List rl = q.getResultList();
-        if (rl.isEmpty()) {
-            return null;
-        } else {
-            return (List<Uporabnik>) (rl);
-        }
+    public List<Uporabnik> pridobiUporabnike(QueryParameters query) {
+        List<Uporabnik> uporabniki = JPAUtils.queryEntities(em, Uporabnik.class, query);
+        return uporabniki;
     }
 
     @BeleziKlice

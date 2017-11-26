@@ -1,3 +1,6 @@
+import com.kumuluz.ee.rest.beans.QueryParameters;
+import com.kumuluz.ee.rest.utils.JPAUtils;
+
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
 import javax.persistence.*;
@@ -19,14 +22,9 @@ public class TockeZrno {
     }
 
     @BeleziKlice
-    public List<Tocke> pridobiTocke() {
-        Query q = em.createNamedQuery("Tocke.getAll");
-        List rl = q.getResultList();
-        if(rl.isEmpty()){
-            return null;
-        } else {
-            return (List<Tocke>) (rl);
-        }
+    public List<Tocke> pridobiTocke(QueryParameters query) {
+        List<Tocke> tocke = JPAUtils.queryEntities(em, Tocke.class, query);
+        return tocke;
     }
 
     @BeleziKlice

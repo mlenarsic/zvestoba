@@ -1,3 +1,6 @@
+import com.kumuluz.ee.rest.beans.QueryParameters;
+import com.kumuluz.ee.rest.utils.JPAUtils;
+
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
 import javax.persistence.*;
@@ -19,14 +22,9 @@ public class StoritveZrno {
     }
 
     @BeleziKlice
-    public List<Storitev> pridobiStoritve() {
-        Query q = em.createNamedQuery("Storitev.getAll");
-        List rl = q.getResultList();
-        if(rl.isEmpty()){
-            return null;
-        } else {
-            return (List<Storitev>) (rl);
-        }
+    public List<Storitev> pridobiStoritve(QueryParameters query) {
+        List<Storitev> storitve = JPAUtils.queryEntities(em, Storitev.class, query);
+        return storitve;
     }
 
     @BeleziKlice

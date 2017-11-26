@@ -1,4 +1,6 @@
 
+import com.kumuluz.ee.rest.beans.QueryParameters;
+
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.ws.rs.*;
@@ -15,21 +17,16 @@ public class UporabnikiVir {
     @Inject
     private UporabnikiZrno uBean;
 
-    @Inject
-    private IdentifikatorZrno iz;
+    @Context
+    protected UriInfo uriInfo;
 
     private Logger log = Logger.getLogger(UporabnikiZrno.class.getName());
 
     @GET
     public Response vrniUporabnike(){
-        log.info("Zacetek: vrni uporabnike");
-        log.info("Generiran identifikator:" + iz.getIdentifikator());
-        List<Uporabnik> uporabniki  = uBean.pridobiUporabnike();
-        log.info("Konec: vrni uporabnike");
-        log.info("Generiran identifikator:" + iz.getIdentifikator());
-
+        QueryParameters query = QueryParameters.query(uriInfo.getRequestUri().getQuery()).build();
+        List<Uporabnik> uporabniki = uBean.pridobiUporabnike(query);
         return Response.status(Response.Status.OK).entity(uporabniki).build();
-
     }
 
     @Path("{id}")
