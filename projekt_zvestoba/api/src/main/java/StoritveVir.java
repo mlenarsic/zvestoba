@@ -1,5 +1,12 @@
 
 import com.kumuluz.ee.rest.beans.QueryParameters;
+import io.swagger.oas.annotations.Operation;
+import io.swagger.oas.annotations.headers.Header;
+import io.swagger.oas.annotations.media.Content;
+import io.swagger.oas.annotations.media.Schema;
+import io.swagger.oas.annotations.responses.ApiResponse;
+import io.swagger.oas.annotations.security.SecurityRequirement;
+import org.eclipse.jetty.http2.api.Session;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -19,6 +26,16 @@ public class StoritveVir {
     @Context
     protected UriInfo uriInfo;
 
+    @Operation(description = "Vrne seznam storitev iz baze.", summary = "Seznam storitev", tags = "storitve", responses = {
+            @ApiResponse(responseCode = "200",
+                    description = "Seznam storitev",
+                    content = @Content(
+                            schema = @Schema(implementation
+                                    = Session.class)),
+                    headers = {@Header(name = "X-Total-Count",
+                            schema = @Schema(type = "int"))}
+            )})
+    @SecurityRequirement(name = "openid-connect")
     @GET
     public Response vrniStoritve(){
 
@@ -28,6 +45,16 @@ public class StoritveVir {
 
     }
 
+    @Operation(description = "Vrne storitev z dolocenim id-jem iz baze.", summary = "Storitev  id-jem", tags = "storitve", responses = {
+            @ApiResponse(responseCode = "200",
+                    description = "Storitev",
+                    content = @Content(
+                            schema = @Schema(implementation
+                                    = Session.class)),
+                    headers = {@Header(name = "X-Total-Count",
+                            schema = @Schema(type = "int"))}
+            )})
+    @SecurityRequirement(name = "openid-connect")
     @Path("{id}")
     @GET
     public Response vrniStoritev(@PathParam("id") Integer id) {
@@ -37,6 +64,16 @@ public class StoritveVir {
 
     }
 
+    @Operation(description = "Doda storitev v bazo.", summary = "Dodajanje storitve", tags = "storitve", responses = {
+            @ApiResponse(responseCode = "200",
+                    description = "Storitev je bila dodana",
+                    content = @Content(
+                            schema = @Schema(implementation
+                                    = Session.class)),
+                    headers = {@Header(name = "X-Total-Count",
+                            schema = @Schema(type = "int"))}
+            )})
+    @SecurityRequirement(name = "openid-connect")
     @POST
     public Response dodajStoritev(Storitev storitev) {
 
@@ -45,6 +82,16 @@ public class StoritveVir {
 
     }
 
+    @Operation(description = "Posodobi storitev z dolocenim id-jem v bazi.", summary = "Posodabljanje storitve", tags = "storitve", responses = {
+            @ApiResponse(responseCode = "200",
+                    description = "Storitev je bila posodobljena",
+                    content = @Content(
+                            schema = @Schema(implementation
+                                    = Session.class)),
+                    headers = {@Header(name = "X-Total-Count",
+                            schema = @Schema(type = "int"))}
+            )})
+    @SecurityRequirement(name = "openid-connect")
     @Path("{id}")
     @PUT
     public Response posodobiStoritev(@PathParam("id") Integer id, Storitev storitev) {
@@ -54,6 +101,16 @@ public class StoritveVir {
 
     }
 
+    @Operation(description = "Izbrise storitev z dolocenim id-jem iz baze.", summary = "Brisanje storitve", tags = "storitve", responses = {
+            @ApiResponse(responseCode = "200",
+                    description = "Storitev je bila izbrisana",
+                    content = @Content(
+                            schema = @Schema(implementation
+                                    = Session.class)),
+                    headers = {@Header(name = "X-Total-Count",
+                            schema = @Schema(type = "int"))}
+            )})
+    @SecurityRequirement(name = "openid-connect")
     @Path("{id}")
     @DELETE
     public Response izbrisiStoritev(@PathParam("id") Integer id) {

@@ -1,3 +1,11 @@
+import io.swagger.oas.annotations.Operation;
+import io.swagger.oas.annotations.headers.Header;
+import io.swagger.oas.annotations.media.Content;
+import io.swagger.oas.annotations.media.Schema;
+import io.swagger.oas.annotations.responses.ApiResponse;
+import io.swagger.oas.annotations.security.SecurityRequirement;
+import org.eclipse.jetty.http2.api.Session;
+
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.ws.rs.*;
@@ -12,6 +20,16 @@ public class UpravljanjeZvestobeVir {
     @Inject
     private UpravljanjeZvestobeZrno uzBean;
 
+    @Operation(description = "Ustrezni kartici dolocenega uporabnika doda tocke za opravljeno storitev.", summary = "Dodajanje tock", tags = "upravljanje zvestobe", responses = {
+            @ApiResponse(responseCode = "200",
+                    description = "Tocke so bile dodane",
+                    content = @Content(
+                            schema = @Schema(implementation
+                                    = Session.class)),
+                    headers = {@Header(name = "X-Total-Count",
+                            schema = @Schema(type = "int"))}
+            )})
+    @SecurityRequirement(name = "openid-connect")
     @Path("{id}")
     @POST
     public Response opravljenaStoritev(@PathParam("id") Integer id, Storitev storitev) {
@@ -21,10 +39,20 @@ public class UpravljanjeZvestobeVir {
 
     }
 
+    @Operation(description = "Ustrezni kartici dolocenega uporabnika odsteje stevilo tock.", summary = "Koristenje tock", tags = "upravljanje zvestobe", responses = {
+            @ApiResponse(responseCode = "200",
+                    description = "Tocke so bile uporabljene",
+                    content = @Content(
+                            schema = @Schema(implementation
+                                    = Session.class)),
+                    headers = {@Header(name = "X-Total-Count",
+                            schema = @Schema(type = "int"))}
+            )})
+    @SecurityRequirement(name = "openid-connect")
     @Path("{id}")
     @PUT
-    public Response koristenjeTock(@PathParam("id") Integer id, Integer pid) {
-        uzBean.koristiTocke(id, pid);
+    public Response koristenjeTock(@PathParam("id") Integer id, Integer pid, Integer tocke) {
+        uzBean.koristiTocke(id, pid,tocke);
         return Response.status(Response.Status.OK).build();
     }
 

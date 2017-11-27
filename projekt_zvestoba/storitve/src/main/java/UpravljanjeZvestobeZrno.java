@@ -41,14 +41,14 @@ public class UpravljanjeZvestobeZrno {
         }
     }
 
-    public void koristiTocke(int idUp, int pid){
+    public void koristiTocke(int idUp, int pid, int tocke){
         Uporabnik u = uz.pridobiUporabnika(idUp);
         Tocke t = tz.pridobiTocko(u,pid);
         if(t == null){
             log.info("Uporabnik pri temu ponudniku nima kartice!");
         } else {
             int stanje = t.getZbrane_tocke();
-            stanje -= 10;
+            stanje -= tocke;
             if (stanje < 0) {
                 log.info("Premalo tock!");
             } else {
