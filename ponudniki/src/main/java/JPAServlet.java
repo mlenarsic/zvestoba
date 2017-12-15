@@ -16,6 +16,8 @@ public class JPAServlet extends HttpServlet {
         PrintWriter writer = resp.getWriter();
         writer.append("Hello world\n");
 
+
+
     }
 
 }

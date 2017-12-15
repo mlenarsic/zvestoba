@@ -1,10 +1,12 @@
 
 import com.kumuluz.ee.rest.beans.QueryParameters;
 
+import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -14,26 +16,46 @@ import java.util.logging.Logger;
 @ApplicationScoped
 public class PonudnikiVir {
 
-    @Inject
-    private PonudnikiZrno uBean;
-
     @Context
     protected UriInfo uriInfo;
 
-    private Logger log = Logger.getLogger(PonudnikiZrno.class.getName());
+    private Logger log = Logger.getLogger(PonudnikiVir.class.getName());
+
+    private ArrayList<Ponudnik> init() {
+        ArrayList<Ponudnik> ponudniki = new ArrayList<Ponudnik>();
+
+        Ponudnik p1 = new Ponudnik();
+        Ponudnik p2 = new Ponudnik();
+
+        p1.setId(1);
+        p1.setIme("Mercator");
+
+        p2.setId(2);
+        p2.setIme("Hofer");
+
+        ponudniki.add(p1);
+        ponudniki.add(p2);
+
+        return ponudniki;
+
+    }
 
     @GET
     public Response vrniPonudike(){
-        QueryParameters query = QueryParameters.query(uriInfo.getRequestUri().getQuery()).build();
-        List<Ponudnik> ponudniki = uBean.pridobiPonudnike(query);
+        List<Ponudnik> ponudniki = init();
         return Response.status(Response.Status.OK).entity(ponudniki).build();
     }
 
     @Path("{id}")
     @GET
     public Response vrniPonudnika(@PathParam("id") Integer id) {
-        Ponudnik ponudnik = uBean.pridobiPonudnika(id);
-        return Response.status(Response.Status.OK).entity(ponudnik).build();
+        List<Ponudnik> ponudniki = init();
+        for (int i = 0; i < ponudniki.size(); i++) {
+            if (ponudniki.get(i).getId() == id) {
+                return Response.status(Response.Status.OK).entity(ponudniki.get(i)).build();
+            }
+        }
+        return null;
     }
 
 }
