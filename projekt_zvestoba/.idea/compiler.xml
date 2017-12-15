@@ -12,10 +12,10 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="api" target="1.5" />
-      <module name="entitete" target="1.5" />
-      <module name="projekt_zvestoba" target="1.5" />
-      <module name="storitve" target="1.5" />
+      <module name="api" target="1.8" />
+      <module name="entitete" target="1.8" />
+      <module name="projekt_zvestoba" target="1.8" />
+      <module name="storitve" target="1.8" />
       <module name="web" target="1.5" />
     </bytecodeTargetLevel>
   </component>
