@@ -36,7 +36,7 @@ public class TockeVir {
         for(int i = 0; i < tocke.size(); i++){
             Tocke t = tocke.get(i);
             Ponudnik p = httpClient
-                    .target("http://192.168.99.100:8081/v1/ponudniki/" + t.getPonudnik_id())
+                    .target("https://ponudniki.herokuapp.com/v1/ponudniki" + t.getPonudnik_id())
                     .request()
                     .get(new GenericType<Ponudnik>(){});
             Tocke_ponudnik TP = new Tocke_ponudnik();
