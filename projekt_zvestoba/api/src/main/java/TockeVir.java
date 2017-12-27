@@ -28,23 +28,26 @@ public class TockeVir {
     @PostConstruct
     private void init() {
         httpClient = ClientBuilder.newClient();
-        String baseUrl = "http://192.168.99.100:8081/v1";
+    }
+    public Tocke_ponudnik vrniTockoSPonudnikom(Tocke t){
+        Ponudnik p =  httpClient
+                .target("http://ponudniki.herokuapp.com/v1/ponudniki/" + t.getPonudnik_id())
+                .request()
+                .get(new GenericType<Ponudnik>(){});
+        Tocke_ponudnik TP = new Tocke_ponudnik();
+        TP.setId_kartice(t.getId_kartice());
+        TP.setZbrane_tocke(t.getZbrane_tocke());
+        TP.setUporabnik(t.getUporabnik());
+        TP.setPonudnik(p);
+        return TP;
+
+
     }
 
     public List<Tocke_ponudnik> vrniTockeSPonudniki(List<Tocke> tocke){
         List<Tocke_ponudnik> tp = new LinkedList<>();
         for(int i = 0; i < tocke.size(); i++){
-            Tocke t = tocke.get(i);
-            Ponudnik p = httpClient
-                    .target("https://ponudniki.herokuapp.com/v1/ponudniki" + t.getPonudnik_id())
-                    .request()
-                    .get(new GenericType<Ponudnik>(){});
-            Tocke_ponudnik TP = new Tocke_ponudnik();
-            TP.setId_kartice(t.getId_kartice());
-            TP.setZbrane_tocke(t.getZbrane_tocke());
-            TP.setUporabnik(t.getUporabnik());
-            TP.setPonudnik(p);
-            tp.add(TP);
+            tp.add(vrniTockoSPonudnikom(tocke.get(i)));
         }
         return tp;
     }
@@ -63,7 +66,8 @@ public class TockeVir {
     public Response vrniTocke(@PathParam("id") Integer id) {
 
         Tocke tocke = tBean.pridobiTocko(id);
-        return Response.status(Response.Status.OK).entity(tocke).build();
+        Tocke_ponudnik tp = vrniTockoSPonudnikom(tocke);
+        return Response.status(Response.Status.OK).entity(tp).build();
 
     }
 
