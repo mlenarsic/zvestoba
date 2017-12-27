@@ -1,7 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e254661d-4ff4-44e2-9bd8-31bf33295cc3" name="Default" comment="" />
+    <list default="true" id="e254661d-4ff4-44e2-9bd8-31bf33295cc3" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/JPAServlet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/META-INF/beans.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/NotFoundMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/Ponudnik.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/RestStoritve.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/StoritveVir$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/StoritveVir.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/Storitve_ponudnik.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/TockeVir$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/TockeVir.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/Tocke_ponudnik.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/UporabnikiVir.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/UpravljanjeZvestobeVir.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/config.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/entitete/target/classes/META-INF/persistence.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/entitete/target/classes/Storitev.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/entitete/target/classes/Tocke.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/entitete/target/classes/Uporabnik.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/entitete/target/classes/init-db.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/entitete/target/entitete-1.0-SNAPSHOT.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/entitete/target/maven-archiver/pom.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/entitete/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/entitete/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/entitete/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/storitve/target/classes/BelezenjeKlicevInterceptor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/storitve/target/classes/BelezenjeKlicevZrno.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/storitve/target/classes/BeleziKlice.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/storitve/target/classes/IdentifikatorZrno.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/storitve/target/classes/META-INF/beans.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/storitve/target/classes/StoritveZrno.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/storitve/target/classes/TockeZrno.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/storitve/target/classes/UporabnikiZrno.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/storitve/target/classes/UpravljanjeZvestobeZrno.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/storitve/target/maven-archiver/pom.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/storitve/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/storitve/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/storitve/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/storitve/target/storitve-1.0-SNAPSHOT.jar" afterPath="" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/api/target/" />
@@ -66,8 +105,8 @@
       <file leaf-file-name="Uporabnik.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/entitete/src/main/java/Uporabnik.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="15" column="7" lean-forward="false" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+            <state relative-caret-position="600">
+              <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -611,16 +650,15 @@
       <workItem from="1514205636032" duration="3057000" />
       <workItem from="1514314489223" duration="24000" />
       <workItem from="1514314527559" duration="2151000" />
-      <workItem from="1514367181829" duration="18000" />
+      <workItem from="1514367181829" duration="628000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79252000" />
+    <option name="totallyTimeSpent" value="79862000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="372" y="-16" width="3484" height="2192" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -629,9 +667,9 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33024216" sideWeight="0.503125" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41753653" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41743916" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23235446" sideWeight="0.496875" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23235446" sideWeight="0.496875" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -639,7 +677,7 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22479722" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26354167" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2633256" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -866,8 +904,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/entitete/src/main/java/Uporabnik.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="15" column="7" lean-forward="false" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        <state relative-caret-position="600">
+          <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
           <folding />
         </state>
       </provider>
