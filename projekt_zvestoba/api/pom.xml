@@ -48,11 +48,6 @@
                         </goals>
                     </execution>
                 </executions>
-                <configuration>
-                    <specificationConfig>
-                        <includeSwaggerUI>true</includeSwaggerUI>
-                    </specificationConfig>
-                </configuration>
             </plugin>
         </plugins>
     </build>
