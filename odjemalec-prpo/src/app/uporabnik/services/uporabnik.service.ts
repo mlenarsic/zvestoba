@@ -5,7 +5,6 @@ import 'rxjs/add/operator/toPromise';
 
 import {Uporabnik} from '../models/uporabnik';
 
-
 @Injectable()
 export class UporabnikService {
 
@@ -23,7 +22,7 @@ export class UporabnikService {
     }
 
     getUporabnik(id: number): Promise<Uporabnik> {
-        const url = `${this.url}/${id}`;
+        const url = `${this.url}/${id}/tocke`;
         return this.http.get(url)
             .toPromise()
             .then(response => response as Uporabnik)

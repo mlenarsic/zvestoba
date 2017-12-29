@@ -1,16 +1,8 @@
-<style>
-    .center {
-        margin: auto;
-        width: 60%;
-        border: 3px solid #73AD21;
-        padding: 10px;
-    }
-</style>
 <h2>Uporabniki</h2>
 
 <ul class="uporabniki">
     <li *ngFor="let uporabnik of uporabniki" (click)="naPodrobnosti(uporabnik)">
-        <span class="center">{{uporabnik.ime}} {{uporabnik.priimek}}</span>
+        <span>{{uporabnik.ime}} {{uporabnik.priimek}}</span>
         <button class="delete"
                 (click)="delete(uporabnik); $event.stopPropagation()">x
         </button>

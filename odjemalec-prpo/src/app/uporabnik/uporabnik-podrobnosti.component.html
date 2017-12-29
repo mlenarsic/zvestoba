@@ -2,7 +2,7 @@
 
     <h3>Podrobnosti uporabnika {{uporabnik.ime}}</h3>
 
-    <table>
+    <table style="width: 70%;" class="uporabniki">
         <tr>
             <td>Id:</td>
             <td>{{uporabnik.id}}</td>
@@ -25,5 +25,24 @@
         </tr>
     </table>
 
+    <br>
+    <h4>Kartice:</h4>
+    <table style="width: 100%;">
+        <tr>
+            <th>Ponudnik</th>
+            <th>Število točk</th>
+        </tr>
+        <tr *ngFor="let tocka of uporabnik.tocke">
+            <td align="center">{{tocka.ponudnik.ime}}</td>
+            <td align="center">{{tocka.zbrane_tocke}}</td>
+            <button class="delete"
+                    (click)="delete(tocka); $event.stopPropagation()">x
+            </button>
+        </tr>
 
+    </table>
+
+
+    <button (click)="nazaj()">Nazaj</button>
+    <button (click)="dodajKartico(uporabnik)">Dodaj novo kartico</button>
 </div>

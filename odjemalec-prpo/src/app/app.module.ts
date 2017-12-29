@@ -10,6 +10,8 @@ import {UporabnikiComponent} from './uporabnik/uporabniki.component';
 import {UporabnikiDodajComponent} from './uporabnik/uporabniki-dodaj.component';
 import {UporabnikPodrobnostiComponent} from './uporabnik/uporabnik-podrobnosti.component';
 import {UporabnikService} from './uporabnik/services/uporabnik.service';
+import {KarticaDodajComponent} from "./uporabnik/kartica-dodaj.component";
+import {TockeService} from "./uporabnik/services/tocke.service";
 
 
 @NgModule({
@@ -23,9 +25,10 @@ import {UporabnikService} from './uporabnik/services/uporabnik.service';
         AppComponent,
         UporabnikiComponent,
         UporabnikPodrobnostiComponent,
-        UporabnikiDodajComponent
+        UporabnikiDodajComponent,
+        KarticaDodajComponent
     ],
-    providers: [UporabnikService],
+    providers: [UporabnikService, TockeService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
