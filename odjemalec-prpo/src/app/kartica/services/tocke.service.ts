@@ -46,6 +46,15 @@ export class TockeService {
             .catch(this.handleError);
     }
 
+    update(tocke: _Tocke): Promise<void> {
+        const url = `${this.url}/${tocke.id_kartice}`
+        console.log(url);
+        return this.http
+            .put(url, JSON.stringify(tocke), {headers: this.headers})
+            .toPromise()
+            .catch(this.handleError);
+    }
+
     private handleError(error: any): Promise<any> {
         console.error('Prišlo je do napake', error);
         return Promise.reject(error.message || error);

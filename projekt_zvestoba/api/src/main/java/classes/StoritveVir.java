@@ -1,5 +1,6 @@
 package classes;
 
+import com.kumuluz.ee.cors.annotations.CrossOrigin;
 import com.kumuluz.ee.rest.beans.QueryParameters;
 
 import javax.annotation.PostConstruct;

@@ -4,6 +4,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import 'rxjs/add/operator/toPromise';
 
 import {Uporabnik} from '../models/uporabnik';
+import {_Uporabnik} from "../models/_uporabnik";
 
 @Injectable()
 export class UporabnikService {
@@ -34,6 +35,15 @@ export class UporabnikService {
         return this.http.delete(url, {headers: this.headers})
             .toPromise()
             .then(() => null, () => null)
+            .catch(this.handleError);
+    }
+
+    update(uporabnik: _Uporabnik): Promise<void> {
+        const url = `${this.url}/${uporabnik.id}`
+        console.log(url);
+        return this.http
+            .put(url, JSON.stringify(uporabnik), {headers: this.headers})
+            .toPromise()
             .catch(this.handleError);
     }
 

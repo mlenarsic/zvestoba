@@ -18,7 +18,6 @@ import java.util.logging.Logger;
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 @ApplicationScoped
-@CrossOrigin
 public class UporabnikiVir {
     private Client httpClient;
     private Pretvorbe p;

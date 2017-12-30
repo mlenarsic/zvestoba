@@ -1,5 +1,6 @@
 package classes;
 
+import com.kumuluz.ee.cors.annotations.CrossOrigin;
 import com.kumuluz.ee.rest.beans.QueryParameters;
 
 import javax.annotation.PostConstruct;
@@ -85,7 +86,11 @@ public class TockeVir {
     @Path("{id}")
     @PUT
     public Response posodobiPocke(@PathParam("id") Integer id, Tocke tocke) {
-
+        System.out.println("\n\nPUT METODA\n\n");
+        System.out.println(tocke.getId_kartice());
+        System.out.println(tocke.getUporabnik().tostring());
+        System.out.println(tocke.getZbrane_tocke());
+        System.out.println(tocke.getPonudnik_id());
         tBean.posodobiTocko(id, tocke);
         return Response.status(Response.Status.OK).entity(tocke).build();
 

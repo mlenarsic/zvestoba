@@ -1,0 +1,20 @@
+<h2>Posodobi kartico</h2>
+
+<div *ngIf="kartica">
+    <form (ngSubmit)="submitForm()" ngNativeValidate>
+        <table>
+            <tr>
+                <td><label for="zbrane_tocke">Število zbranih točk</label></td>
+                <td><input [(ngModel)]="kartica.zbrane_tocke" id="zbrane_tocke" name="zbrane_tocke" required/> </td>
+            </tr>
+            <tr>
+                <td><label for="ponudnik_id">Id ponudnika</label></td>
+                <td><input [(ngModel)]="kartica.ponudnik.id" id="ponudnik_id" name="ponudnik_id" required/> </td>
+            </tr>
+        </table>
+
+
+        <button type="button" (click)="nazaj()">Nazaj</button>
+        <button type="submit">Posodobi</button>
+    </form>
+</div>

@@ -1,4 +1,4 @@
-import {_Uporabnik} from "./_uporabnik";
+import {_Uporabnik} from "../../uporabnik/models/_uporabnik";
 
 export class _Tocke {
     id_kartice: number;

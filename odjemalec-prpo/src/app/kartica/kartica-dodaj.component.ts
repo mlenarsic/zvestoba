@@ -6,12 +6,12 @@ import {Router} from '@angular/router';
 
 import {Tocke} from './models/tocke';
 import {TockeService} from './services/tocke.service';
-import {Uporabnik} from "./models/uporabnik";
-import {UporabnikService} from "./services/uporabnik.service"
+import {Uporabnik} from "../uporabnik/models/uporabnik";
+import {UporabnikService} from "../uporabnik/services/uporabnik.service"
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import 'rxjs/add/operator/toPromise';
-import {_Uporabnik} from "./models/_uporabnik";
+import {_Uporabnik} from "../uporabnik/models/_uporabnik";
 import {_Tocke} from "./models/_tocke";
 
 @Component({
@@ -22,7 +22,7 @@ import {_Tocke} from "./models/_tocke";
 export class KarticaDodajComponent {
     kartica: _Tocke = new _Tocke;
     uporabnik: Uporabnik;
-    ponudniki: Ponudnik[];
+
 
     constructor(private tockeService: TockeService,
                 private route: ActivatedRoute,
@@ -43,6 +43,7 @@ export class KarticaDodajComponent {
         u.priimek = this.uporabnik.priimek;
         u.id = this.uporabnik.id;
         u.email = this.uporabnik.email;
+        u.uporabnisko_ime = this.uporabnik.uporabnisko_ime;
         let t = new _Tocke();
         t.zbrane_tocke = this.kartica.zbrane_tocke;
         t.ponudnik_id = this.kartica.ponudnik_id;
@@ -50,19 +51,12 @@ export class KarticaDodajComponent {
         this.tockeService
             .create(t)
             .then(() => {
-                this.router.navigate(['/uporabniki']);
+                this.router.navigate(['/uporabniki', this.uporabnik.id]);
             });
     }
 
     nazaj(): void {
-        this.router.navigate(['/uporabniki']);
-    }
-
-    getPonudniki(): Promise<Ponudnik[]> {
-        return this.http.get('http://ponudniki.herokuapp.com/v1/ponudniki')
-            .toPromise()
-            .then(response => response as Uporabnik[])
-            .catch(this.handleError);
+        this.router.navigate(['/uporabniki/', this.uporabnik.id]);
     }
 
     private handleError(error: any): Promise<any> {

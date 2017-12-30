@@ -1,4 +1,4 @@
-import {Tocke} from "./tocke";
+import {Tocke} from "../../kartica/models/tocke";
 
 export class Uporabnik {
     id: number;

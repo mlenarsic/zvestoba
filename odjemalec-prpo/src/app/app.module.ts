@@ -10,8 +10,10 @@ import {UporabnikiComponent} from './uporabnik/uporabniki.component';
 import {UporabnikiDodajComponent} from './uporabnik/uporabniki-dodaj.component';
 import {UporabnikPodrobnostiComponent} from './uporabnik/uporabnik-podrobnosti.component';
 import {UporabnikService} from './uporabnik/services/uporabnik.service';
-import {KarticaDodajComponent} from "./uporabnik/kartica-dodaj.component";
-import {TockeService} from "./uporabnik/services/tocke.service";
+import {KarticaDodajComponent} from "./kartica/kartica-dodaj.component";
+import {TockeService} from "./kartica/services/tocke.service";
+import {KarticaPosodobiComponent} from "./kartica/kartica-posodobi.component";
+import {UporabnikPosodobiComponent} from "./uporabnik/uporabnik-posodobi.component";
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import {TockeService} from "./uporabnik/services/tocke.service";
         UporabnikiComponent,
         UporabnikPodrobnostiComponent,
         UporabnikiDodajComponent,
-        KarticaDodajComponent
+        KarticaDodajComponent,
+        KarticaPosodobiComponent,
+        UporabnikPosodobiComponent
     ],
     providers: [UporabnikService, TockeService],
     bootstrap: [AppComponent]

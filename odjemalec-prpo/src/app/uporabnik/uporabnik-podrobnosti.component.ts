@@ -6,8 +6,8 @@ import {Router} from '@angular/router';
 
 import {Uporabnik} from './models/uporabnik';
 import {UporabnikService} from './services/uporabnik.service';
-import {TockeService} from "./services/tocke.service";
-import {Tocke} from "./models/tocke";
+import {TockeService} from "../kartica/services/tocke.service";
+import {Tocke} from "../kartica/models/tocke";
 
 @Component({
     moduleId: module.id,
@@ -33,7 +33,7 @@ export class UporabnikPodrobnostiComponent implements OnInit {
     }
 
     nazaj(): void {
-        this.location.back();
+        this.router.navigate(['/uporabniki/']);
     }
 
     dodajKartico(uporabnik: Uporabnik): void {
@@ -51,5 +51,12 @@ export class UporabnikPodrobnostiComponent implements OnInit {
                     }
                 }
             });
+    }
+    posodobiUporabnika(id: number): void {
+        this.router.navigate(['/posodobiuporabnika/', id]);
+    }
+
+    posodobi(tocke: Tocke): void {
+        this.router.navigate(['/posodobikartico/', tocke.id_kartice]);
     }
 }

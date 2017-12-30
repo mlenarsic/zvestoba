@@ -24,15 +24,20 @@
             <td>{{uporabnik.email}}</td>
         </tr>
     </table>
-
+    <button (click)="posodobiUporabnika(uporabnik.id)">Posodobi</button>
     <br>
     <h4>Kartice:</h4>
     <table style="width: 100%;">
         <tr>
+            <th></th>
             <th>Ponudnik</th>
             <th>Število točk</th>
         </tr>
         <tr *ngFor="let tocka of uporabnik.tocke">
+            <td><button class="delete"
+                    (click)="posodobi(tocka); $event.stopPropagation()">+
+            </button>
+            </td>
             <td align="center">{{tocka.ponudnik.ime}}</td>
             <td align="center">{{tocka.zbrane_tocke}}</td>
             <button class="delete"

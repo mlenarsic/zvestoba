@@ -82,7 +82,7 @@ public class TockeZrno {
     public void posodobiTocko(int tockeId, Tocke t){
         t.setId_kartice(tockeId);
         em.getTransaction().begin();
-        em.remove(t);
+        em.merge(t);
         em.getTransaction().commit();
     }
     @BeleziKlice
