@@ -1,3 +1,4 @@
+
 public class Ponudnik {
 
     private Integer id;

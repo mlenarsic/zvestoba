@@ -19,10 +19,12 @@ public class PonudnikiVir {
     @Context
     protected UriInfo uriInfo;
 
+    ArrayList<Ponudnik> ponudniki;
+
     private Logger log = Logger.getLogger(PonudnikiVir.class.getName());
 
     private ArrayList<Ponudnik> init() {
-        ArrayList<Ponudnik> ponudniki = new ArrayList<Ponudnik>();
+        ponudniki = new ArrayList<Ponudnik>();
 
         Ponudnik p1 = new Ponudnik();
         Ponudnik p2 = new Ponudnik();
@@ -56,6 +58,14 @@ public class PonudnikiVir {
             }
         }
         return null;
+    }
+
+    @POST
+    public Response dodajPonudnika(Ponudnik ponudnik) {
+        ponudniki.add(ponudnik);
+        QueueManager qm = new QueueManager();
+        qm.posljiObvestiloODodanemPonudniku(ponudnik.getId());
+        return Response.status(Response.Status.CREATED).entity(ponudnik).build();
     }
 
 }
