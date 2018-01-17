@@ -1,6 +1,10 @@
 package classes;
 
 import com.kumuluz.ee.cors.annotations.CrossOrigin;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -16,6 +20,13 @@ public class UpravljanjeZvestobeVir {
     @Inject
     private UpravljanjeZvestobeZrno uzBean;
 
+    @Operation(description = "Ustrezni kartici dolocenega uporabnika doda tocke za opravljeno storitev.", summary = "Dodajanje tock", tags = "upravljanje zvestobe", responses = {
+            @ApiResponse(responseCode = "200",
+                    description = "Tocke so bile dodane",
+                    content = @Content(
+                            schema = @Schema(implementation
+                                    = Tocke.class))
+            )})
     @Path("{id}")
     @POST
     @CrossOrigin
