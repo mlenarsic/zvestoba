@@ -2,22 +2,137 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e254661d-4ff4-44e2-9bd8-31bf33295cc3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/META-INF/servlets/java.lang.Object" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/target/api-1.0.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/api/target/api-1.0.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/target/api-1.0.0-SNAPSHOT.jar.original" afterPath="$PROJECT_DIR$/api/target/api-1.0.0-SNAPSHOT.jar.original" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/target/classes/lib/entitete-1.0.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/api/target/classes/lib/entitete-1.0.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/target/classes/lib/storitve-1.0.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/api/target/classes/lib/storitve-1.0.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/entitete/target/entitete-1.0.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/entitete/target/entitete-1.0.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storitve/target/storitve-1.0.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/storitve/target/storitve-1.0.0-SNAPSHOT.jar" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/api-1.0.0-SNAPSHOT.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/api-1.0.0-SNAPSHOT.jar.original" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/META-INF/kumuluzee/boot-loader.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/com/kumuluz/ee/loader/EeBootLoader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/com/kumuluz/ee/loader/EeClassLoader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/com/kumuluz/ee/loader/exception/EeClassLoaderException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/com/kumuluz/ee/loader/jar/JarEntryInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/com/kumuluz/ee/loader/jar/JarFileInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/HikariCP-2.6.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/alpn-api-1.1.3.v20160715.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/amqp-client-5.1.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/aopalliance-repackaged-2.5.0-b32.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/asm-6.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/asm-commons-6.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/asm-tree-6.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/cdi-api-1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/commons-lang3-3.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/cors-filter-2.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/entitete-1.0.0-SNAPSHOT.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/guava-20.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/hk2-api-2.5.0-b32.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/hk2-locator-2.5.0-b32.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/hk2-utils-2.5.0-b32.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/http2-client-9.4.8.v20171121.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/http2-common-9.4.8.v20171121.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/http2-hpack-9.4.8.v20171121.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/http2-http-client-transport-9.4.8.v20171121.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/http2-server-9.4.8.v20171121.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jackson-annotations-2.8.10.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jackson-core-2.8.10.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jackson-databind-2.8.10.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jackson-dataformat-csv-2.8.10.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jackson-dataformat-yaml-2.9.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jackson-jaxrs-base-2.8.10.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jackson-jaxrs-json-provider-2.8.10.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jackson-module-jaxb-annotations-2.8.10.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jandex-2.0.4.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/java-property-utils-1.9.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/javassist-3.21.0-GA.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/javax.annotation-api-1.3.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/javax.el-api-3.0.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/javax.inject-1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/javax.inject-2.5.0-b32.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/javax.interceptor-api-1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/javax.persistence-2.1.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/javax.servlet-api-3.1.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/javax.transaction-api-1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/javax.ws.rs-api-2.0.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jboss-classfilewriter-1.2.1.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jboss-logging-3.3.1.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jersey-cdi1x-2.25.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jersey-client-2.25.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jersey-common-2.25.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jersey-container-servlet-2.25.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jersey-container-servlet-core-2.25.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jersey-entity-filtering-2.25.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jersey-guava-2.25.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jersey-jetty-connector-2.25.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jersey-media-jaxb-2.25.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jersey-media-json-jackson-2.25.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jersey-server-2.25.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jetty-alpn-client-9.4.8.v20171121.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jetty-alpn-openjdk8-client-9.4.8.v20171121.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jetty-alpn-openjdk8-server-9.4.8.v20171121.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jetty-alpn-server-9.4.8.v20171121.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jetty-annotations-9.4.8.v20171121.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jetty-client-9.4.8.v20171121.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jetty-http-9.4.8.v20171121.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jetty-io-9.4.8.v20171121.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jetty-jndi-9.4.8.v20171121.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jetty-plus-9.4.8.v20171121.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jetty-security-9.4.8.v20171121.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jetty-server-9.4.8.v20171121.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jetty-servlet-9.4.8.v20171121.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jetty-util-9.4.8.v20171121.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jetty-webapp-9.4.8.v20171121.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/jetty-xml-9.4.8.v20171121.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/kumuluzee-cdi-weld-2.5.0-SNAPSHOT.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/kumuluzee-common-2.5.0-SNAPSHOT.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/kumuluzee-core-2.5.0-SNAPSHOT.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/kumuluzee-cors-1.1.0-SNAPSHOT.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/kumuluzee-jax-rs-jersey-2.5.0-SNAPSHOT.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/kumuluzee-jpa-common-2.5.0-SNAPSHOT.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/kumuluzee-jpa-eclipselink-2.5.0-SNAPSHOT.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/kumuluzee-jta-common-2.5.0-SNAPSHOT.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/kumuluzee-openapi-1.0.0-SNAPSHOT.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/kumuluzee-rest-core-1.1.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/kumuluzee-servlet-jetty-2.5.0-SNAPSHOT.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/org.eclipse.persistence.antlr-2.6.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/org.eclipse.persistence.asm-2.6.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/org.eclipse.persistence.core-2.6.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/org.eclipse.persistence.jpa-2.6.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/org.eclipse.persistence.jpa.jpql-2.6.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/osgi-resource-locator-1.0.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/postgresql-42.1.4.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/reflections-0.9.11.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/slf4j-api-1.7.25.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/snakeyaml-1.18.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/storitve-1.0.0-SNAPSHOT.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/swagger-annotations-2.0.0-rc3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/swagger-core-2.0.0-rc3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/swagger-integration-2.0.0-rc3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/swagger-jaxrs2-2.0.0-rc3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/swagger-models-2.0.0-rc3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/validation-api-1.1.0.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/weld-api-2.4.SP2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/weld-core-impl-2.4.6.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/weld-core-jsf-2.4.6.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/weld-environment-common-2.4.6.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/weld-probe-core-2.4.6.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/weld-servlet-core-2.4.6.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/classes/lib/weld-spi-2.4.SP2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/maven-archiver/pom.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/entitete/target/entitete-1.0.0-SNAPSHOT.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/entitete/target/maven-archiver/pom.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/entitete/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/entitete/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/entitete/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/storitve/target/maven-archiver/pom.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/storitve/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/storitve/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/storitve/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/storitve/target/storitve-1.0.0-SNAPSHOT.jar" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/target/classes/classes/RestStoritve.class" afterPath="$PROJECT_DIR$/api/target/classes/classes/RestStoritve.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../odjemalec-prpo/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../odjemalec-prpo/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/src/main/java/classes/RestStoritve.java" afterPath="$PROJECT_DIR$/api/src/main/java/classes/RestStoritve.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/target/classes/META-INF/resources/java.lang.Object" afterPath="$PROJECT_DIR$/api/target/classes/META-INF/resources/java.lang.Object" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/entitete/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/entitete/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/entitete/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/entitete/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/entitete/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/entitete/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storitve/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/storitve/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storitve/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/storitve/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storitve/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/storitve/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -78,9 +193,21 @@
       <file leaf-file-name="TockeVir.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/src/main/java/classes/TockeVir.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4040">
-              <caret line="118" column="8" lean-forward="false" selection-start-line="118" selection-start-column="8" selection-end-line="118" selection-end-column="8" />
+            <state relative-caret-position="1080">
+              <caret line="106" column="27" lean-forward="false" selection-start-line="106" selection-start-column="27" selection-end-line="106" selection-end-column="27" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RestStoritve.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/api/src/main/java/classes/RestStoritve.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="12" column="122" lean-forward="false" selection-start-line="12" selection-start-column="122" selection-end-line="12" selection-end-column="122" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -134,8 +261,8 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="18" column="58" lean-forward="false" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
+            <state relative-caret-position="212">
+              <caret line="28" column="20" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -151,11 +278,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DodaniPonudnikiWorker.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DodaniPonudnikiWorker.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/storitve/src/main/java/classes/DodaniPonudnikiWorker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+            <state relative-caret-position="720">
+              <caret line="45" column="9" lean-forward="false" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -168,16 +295,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1280">
               <caret line="42" column="78" lean-forward="false" selection-start-line="42" selection-start-column="78" selection-end-line="42" selection-end-column="78" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UpravljanjeZvestobeZrno.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/storitve/src/main/java/classes/UpravljanjeZvestobeZrno.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -246,7 +363,6 @@
         <option value="$PROJECT_DIR$/entitete/pom.xml" />
         <option value="$PROJECT_DIR$/storitve/src/main/java/classes/UpravljanjeZvestobeZrno.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/api/pom.xml" />
         <option value="$PROJECT_DIR$/entitete/src/main/java/classes/Uporabnik.java" />
         <option value="$PROJECT_DIR$/storitve/src/main/java/classes/UporabnikiZrno.java" />
         <option value="$PROJECT_DIR$/storitve/src/main/java/classes/StoritveZrno.java" />
@@ -255,7 +371,6 @@
         <option value="sequence:/60584c05/6ecb6e8c-25f4-422d-9117-65a663485534/postgres.public.storitev_storitevid_seq" />
         <option value="$PROJECT_DIR$/api/src/main/java/classes/UporabnikTocke.java" />
         <option value="$PROJECT_DIR$/api/src/main/java/classes/Pretvorbe.java" />
-        <option value="$PROJECT_DIR$/api/src/main/java/classes/RestStoritve.java" />
         <option value="$PROJECT_DIR$/storitve/src/main/java/classes/TockeZrno.java" />
         <option value="$PROJECT_DIR$/storitve/pom.xml" />
         <option value="$PROJECT_DIR$/storitve/src/main/java/classes/DodaniPonudnikWorker.java" />
@@ -264,6 +379,8 @@
         <option value="$PROJECT_DIR$/api/src/main/java/classes/UporabnikiVir.java" />
         <option value="$PROJECT_DIR$/api/src/main/java/classes/UpravljanjeZvestobeVir.java" />
         <option value="$PROJECT_DIR$/api/src/main/java/classes/StoritveVir.java" />
+        <option value="$PROJECT_DIR$/api/pom.xml" />
+        <option value="$PROJECT_DIR$/api/src/main/java/classes/RestStoritve.java" />
       </list>
     </option>
   </component>
@@ -624,46 +741,45 @@
       <workItem from="1515342066759" duration="7155000" />
       <workItem from="1516197214545" duration="979000" />
       <workItem from="1516208322012" duration="6000" />
-      <workItem from="1516210657957" duration="51000" />
+      <workItem from="1516210657957" duration="736000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122619000" />
+    <option name="totallyTimeSpent" value="123304000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="372" y="-16" width="3484" height="2192" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33024216" sideWeight="0.503125" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.254635" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2838743" sideWeight="0.496875" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26767093" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2633256" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32663575" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2838743" sideWeight="0.496875" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26767093" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32663575" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972693" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
@@ -761,14 +877,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/classes/RestStoritve.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="6" column="23" lean-forward="false" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/storitve/src/main/java/classes/TockeZrno.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1778">
@@ -860,14 +968,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/classes/TockeVir.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4040">
-          <caret line="118" column="8" lean-forward="false" selection-start-line="118" selection-start-column="8" selection-end-line="118" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/src/main/java/classes/UpravljanjeZvestobeVir.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1280">
@@ -906,18 +1006,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/pom.xml">
+    <entry file="file://$PROJECT_DIR$/storitve/src/main/java/classes/DodaniPonudnikiWorker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="18" column="58" lean-forward="false" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
+        <state relative-caret-position="720">
+          <caret line="45" column="9" lean-forward="false" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/classes/TockeVir.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="106" column="27" lean-forward="false" selection-start-line="106" selection-start-column="27" selection-end-line="106" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/storitve/src/main/java/classes/DodaniPonudnikiWorker.java">
+    <entry file="file://$PROJECT_DIR$/api/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+        <state relative-caret-position="212">
+          <caret line="28" column="20" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/classes/RestStoritve.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="12" column="122" lean-forward="false" selection-start-line="12" selection-start-column="122" selection-end-line="12" selection-end-column="122" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
