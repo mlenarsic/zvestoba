@@ -111,5 +111,6 @@
     <orderEntry type="library" name="Maven: io.swagger.core.v3:swagger-core:2.0.0-rc3" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.9.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.6" level="project" />
+    <orderEntry type="library" name="Maven: com.kumuluz.ee.openapi:kumuluzee-openapi-ui:1.0.0-SNAPSHOT" level="project" />
   </component>
 </module>

@@ -1,0 +1,9 @@
+klasi\UporabnikiVir.class
+klasi\StoritveVir.class
+api-specs\v1\openapi-configuration.json
+klasi\UpravljanjeZvestobeVir.class
+META-INF\services\javax.ws.rs.core.Application
+klasi\TockeVir.class
+klasi\RestStoritve.class
+klasi\JPAServlet.class
+klasi\NotFoundMapper.class
