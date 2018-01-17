@@ -111,8 +111,11 @@
     <orderEntry type="library" name="Maven: io.swagger.core.v3:swagger-core:2.0.0-rc3" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.9.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.6" level="project" />
+<<<<<<< HEAD
     <orderEntry type="library" name="Maven: com.kumuluz.ee.cors:kumuluzee-cors:1.1.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.thetransactioncompany:cors-filter:2.5" level="project" />
     <orderEntry type="library" name="Maven: com.thetransactioncompany:java-property-utils:1.9.1" level="project" />
+=======
+>>>>>>> RESTfulApp
   </component>
 </module>

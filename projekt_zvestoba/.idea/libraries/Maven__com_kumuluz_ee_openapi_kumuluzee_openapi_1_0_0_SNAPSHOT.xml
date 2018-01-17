@@ -1,6 +1,7 @@
 <component name="libraryTable">
   <library name="Maven: com.kumuluz.ee.openapi:kumuluzee-openapi:1.0.0-SNAPSHOT">
     <CLASSES>
+<<<<<<< HEAD
       <root url="jar://$MAVEN_REPOSITORY$/com/kumuluz/ee/openapi/kumuluzee-openapi/1.0.0-SNAPSHOT/kumuluzee-openapi-1.0.0-20180104.132318-15.jar!/" />
     </CLASSES>
     <JAVADOC>
@@ -8,6 +9,15 @@
     </JAVADOC>
     <SOURCES>
       <root url="jar://$MAVEN_REPOSITORY$/com/kumuluz/ee/openapi/kumuluzee-openapi/1.0.0-SNAPSHOT/kumuluzee-openapi-1.0.0-20180104.132318-15-sources.jar!/" />
+=======
+      <root url="jar://$MAVEN_REPOSITORY$/com/kumuluz/ee/openapi/kumuluzee-openapi/1.0.0-SNAPSHOT/kumuluzee-openapi-1.0.0-20171222.131554-9.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/kumuluz/ee/openapi/kumuluzee-openapi/1.0.0-SNAPSHOT/kumuluzee-openapi-1.0.0-20171222.131554-9-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/kumuluz/ee/openapi/kumuluzee-openapi/1.0.0-SNAPSHOT/kumuluzee-openapi-1.0.0-20171222.131554-9-sources.jar!/" />
+>>>>>>> RESTfulApp
     </SOURCES>
   </library>
 </component>
