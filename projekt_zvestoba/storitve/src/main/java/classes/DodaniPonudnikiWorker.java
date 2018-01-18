@@ -27,42 +27,30 @@ public class DodaniPonudnikiWorker {
         ConnectionFactory factory = new ConnectionFactory();
 
         // konfiguracija factory-ja
-        factory.setHost("localhost");
+        factory.setHost("192.168.99.100");
+        factory.setUsername("rabbit");
+        factory.setPassword("rabbit");
+        //factory.setVirtualHost(virtualHost);
+        //factory.setPort(5672);
 
         // dodajanje Consumer-ja na channel
-        Consumer consumer = new DefaultConsumer(channel) {
-            public void handleDelivery(String consumerTag, Envelope envelope,
-                                       AMQP.BasicProperties properties, byte[] body)
-                    throws IOException {
-                String message = new String(body, "UTF-8");
-                log.info(" [x] Received '" + message + "'");
-            }
-        };
         // vzpostavitev povezave
         try{
             connection = factory.newConnection();
-        } catch (Exception e) {
-            log.info("Connection error");
-        }
-
-        // ustvarjanje channel-a
-        try {
             channel = connection.createChannel();
-        } catch (Exception e) {
-            log.info("Channel error");
-        }
-        // deklaracija vrste na channel-u
-        try {
-            channel.queueDeclare(QUEUE_NAME, false, false, false, null);
-        } catch (Exception e) {
-            log.info("Queue declare error");
-        }
-
-        // dodajanje poslušalca na channel
-        try {
+            channel.queueDeclare(QUEUE_NAME, true, false, false, null);
+            Consumer consumer = new DefaultConsumer(channel) {
+                @Override
+                public void handleDelivery(String consumerTag, Envelope envelope,
+                                           AMQP.BasicProperties properties, byte[] body)
+                        throws IOException {
+                    String message = new String(body, "UTF-8");
+                    log.info(" [x] Received '" + message + "'");
+                }
+            };
             channel.basicConsume(QUEUE_NAME, true, consumer);
         } catch (Exception e) {
-            log.info("Dodajanje poslušalca exception");
+            log.info("Connection error");
         }
 
     }

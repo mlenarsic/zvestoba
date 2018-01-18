@@ -19,6 +19,9 @@ public class PonudnikiVir {
     @Context
     protected UriInfo uriInfo;
 
+    @Inject
+    private QueueManager qm;
+
     ArrayList<Ponudnik> ponudniki;
 
     private Logger log = Logger.getLogger(PonudnikiVir.class.getName());
@@ -62,8 +65,8 @@ public class PonudnikiVir {
 
     @POST
     public Response dodajPonudnika(Ponudnik ponudnik) {
+        List<Ponudnik> ponudniki = init();
         ponudniki.add(ponudnik);
-        QueueManager qm = new QueueManager();
         qm.posljiObvestiloODodanemPonudniku(ponudnik.getId());
         return Response.status(Response.Status.CREATED).entity(ponudnik).build();
     }

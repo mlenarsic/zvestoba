@@ -21,25 +21,20 @@ public class QueueManager {
         ConnectionFactory factory = new ConnectionFactory();
 
         // konfiguracija factory-ja
-        factory.setHost("localhost");
+        factory.setHost("192.168.99.100");
+        //factory.setPort(15672);
+        factory.setUsername("rabbit");
+        factory.setPassword("rabbit");
         // vzpostavitev povezave
         try{
+            log.info("Conn: ");
             connection = factory.newConnection();
-        } catch (Exception e) {
-            log.info("Connection error");
-        }
-
-        // ustvarjanje channel-a
-        try {
+            log.info("Channel: ");
             channel = connection.createChannel();
+            log.info("Queue declare: ");
+            channel.queueDeclare(QUEUE_NAME, true, false, false, null);
         } catch (Exception e) {
-            log.info("Channel error");
-        }
-        // deklaracija vrste na channel-u
-        try {
-            channel.queueDeclare(QUEUE_NAME, false, false, false, null);
-        } catch (Exception e) {
-            log.info("Queue declare error");
+            log.info("Error: " + e);
         }
     }
 
@@ -51,7 +46,7 @@ public class QueueManager {
             channel.close();
             connection.close();
         } catch (Exception e){
-            log.info("Close error");
+            log.info("Close error:" + e);
         }
 
     }
@@ -62,7 +57,7 @@ public class QueueManager {
         try {
             channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
         } catch (Exception e){
-            log.info("Publish error");
+            log.info("Publish error: " + e);
         }
     }
 }
