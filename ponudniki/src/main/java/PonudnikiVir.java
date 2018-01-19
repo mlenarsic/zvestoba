@@ -26,35 +26,34 @@ public class PonudnikiVir {
 
     private Logger log = Logger.getLogger(PonudnikiVir.class.getName());
 
-    private ArrayList<Ponudnik> init() {
-        ponudniki = new ArrayList<Ponudnik>();
+    private void init() {
+        if(ponudniki == null) {
+            ponudniki = new ArrayList<Ponudnik>();
 
-        Ponudnik p1 = new Ponudnik();
-        Ponudnik p2 = new Ponudnik();
+            Ponudnik p1 = new Ponudnik();
+            Ponudnik p2 = new Ponudnik();
 
-        p1.setId(1);
-        p1.setIme("Mercator");
+            p1.setId(1);
+            p1.setIme("Mercator");
 
-        p2.setId(2);
-        p2.setIme("Hofer");
+            p2.setId(2);
+            p2.setIme("Hofer");
 
-        ponudniki.add(p1);
-        ponudniki.add(p2);
-
-        return ponudniki;
-
+            ponudniki.add(p1);
+            ponudniki.add(p2);
+        }
     }
 
     @GET
     public Response vrniPonudike(){
-        List<Ponudnik> ponudniki = init();
+       init();
         return Response.status(Response.Status.OK).entity(ponudniki).build();
     }
 
     @Path("{id}")
     @GET
     public Response vrniPonudnika(@PathParam("id") Integer id) {
-        List<Ponudnik> ponudniki = init();
+       init();
         for (int i = 0; i < ponudniki.size(); i++) {
             if (ponudniki.get(i).getId() == id) {
                 return Response.status(Response.Status.OK).entity(ponudniki.get(i)).build();
@@ -65,7 +64,7 @@ public class PonudnikiVir {
 
     @POST
     public Response dodajPonudnika(Ponudnik ponudnik) {
-        List<Ponudnik> ponudniki = init();
+        init();
         ponudniki.add(ponudnik);
         qm.posljiObvestiloODodanemPonudniku(ponudnik.getId());
         return Response.status(Response.Status.CREATED).entity(ponudnik).build();
