@@ -115,5 +115,6 @@
     <orderEntry type="library" name="Maven: com.kumuluz.ee.cors:kumuluzee-cors:1.1.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.thetransactioncompany:cors-filter:2.5" level="project" />
     <orderEntry type="library" name="Maven: com.thetransactioncompany:java-property-utils:1.9.1" level="project" />
+    <orderEntry type="library" name="Maven: com.kumuluz.ee.openapi:kumuluzee-openapi-ui:1.0.0-SNAPSHOT" level="project" />
   </component>
 </module>

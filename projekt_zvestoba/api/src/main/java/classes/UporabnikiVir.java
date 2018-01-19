@@ -2,6 +2,11 @@ package classes;
 
 import com.kumuluz.ee.cors.annotations.CrossOrigin;
 import com.kumuluz.ee.rest.beans.QueryParameters;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.headers.Header;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
@@ -38,6 +43,15 @@ public class UporabnikiVir {
         p = new Pretvorbe();
         httpClient = ClientBuilder.newClient();
     }
+    @Operation(description = "Vrne seznam uporabnikov", summary = "Seznam uporabnikov", tags = "uporabniki", responses = {
+            @ApiResponse(responseCode = "200",
+                    description = "",
+                    content = @Content(
+                            schema = @Schema(implementation
+                                    = Uporabnik.class)),
+                    headers = {@Header(name = "",
+                            schema = @Schema(type = "Uporabniki"))}
+            )})
     @GET
     public Response vrniUporabnike(){
         QueryParameters query = QueryParameters.query(uriInfo.getRequestUri().getQuery()).build();
@@ -45,6 +59,13 @@ public class UporabnikiVir {
         return Response.status(Response.Status.OK).entity(uporabniki).build();
     }
 
+    @Operation(description = "Vrne uporabnika z id-jem.", summary = "klasi.Uporabnik", tags = "uporabniki", responses = {
+            @ApiResponse(responseCode = "200",
+                    description = "Uporabnik",
+                    content = @Content(
+                            schema = @Schema(implementation
+                                    = Uporabnik.class))
+            )})
     @Path("{id}")
     @GET
     public Response vrniUporabnika(@PathParam("id") Integer id) {
@@ -55,6 +76,13 @@ public class UporabnikiVir {
 
     }
 
+    @Operation(description = "Doda uporabnika v bazo.", summary = "Dodajanje uporabnika", tags = "uporabniki", responses = {
+            @ApiResponse(responseCode = "200",
+                    description = "Uporabnik je bil dodan",
+                    content = @Content(
+                            schema = @Schema(implementation
+                                    = Uporabnik.class))
+            )})
     @POST
     public Response dodajUporabnika(Uporabnik uporabnik) {
         System.out.println("\n");
@@ -71,6 +99,13 @@ public class UporabnikiVir {
 
     }
 
+    @Operation(description = "Posodobi uporabnika v bazi.", summary = "Posodabljanje uporabnika", tags = "uporabniki", responses = {
+            @ApiResponse(responseCode = "200",
+                    description = "Uporabnik je bil posodoboljen",
+                    content = @Content(
+                            schema = @Schema(implementation
+                                    = Uporabnik.class))
+            )})
     @Path("{id}")
     @PUT
     public Response posodobiUporabnika(@PathParam("id") Integer id, Uporabnik uporabnik) {
@@ -80,6 +115,13 @@ public class UporabnikiVir {
 
     }
 
+    @Operation(description = "Izbrise uprabnika iz baze.", summary = "Brisanje uporabnika", tags = "uporabniki", responses = {
+            @ApiResponse(responseCode = "200",
+                    description = "Uporabnik je bil izbirsan",
+                    content = @Content(
+                            schema = @Schema(implementation
+                                    = Uporabnik.class))
+            )})
     @Path("{id}")
     @DELETE
     public Response izbrisiUporabnika(@PathParam("id") Integer id) {
@@ -90,7 +132,13 @@ public class UporabnikiVir {
     }
 
 
-
+    @Operation(description = "Vrne tocke dolocenega uporabnika.", summary = "Tocke uporabnika", tags = "uporabniki", responses = {
+            @ApiResponse(responseCode = "200",
+                    description = "Tocke uporabnika",
+                    content = @Content(
+                            schema = @Schema(implementation
+                                    = UporabnikTocke.class))
+            )})
     @Path("{id}/tocke")
     @GET
     public Response pridobiTockeUporabnika(@PathParam("id") Integer id) {

@@ -2,6 +2,10 @@ package classes;
 
 import com.kumuluz.ee.cors.annotations.CrossOrigin;
 import com.kumuluz.ee.rest.beans.QueryParameters;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
@@ -54,6 +58,13 @@ public class TockeVir {
         return tp;
     }
 
+    @Operation(description = "Vrne seznam tock.", summary = "Seznam tock", tags = "tocke", responses = {
+            @ApiResponse(responseCode = "200",
+                    description = "Seznam tock",
+                    content = @Content(
+                            schema = @Schema(implementation
+                                    = Tocke.class))
+            )})
     @GET
     public Response vrniTocke(){
         QueryParameters query = QueryParameters.query(uriInfo.getRequestUri().getQuery()).build();
@@ -63,6 +74,13 @@ public class TockeVir {
 
     }
 
+    @Operation(description = "Vrne tocko z dolocenim id-jem.", summary = "Tocka", tags = "tocke", responses = {
+            @ApiResponse(responseCode = "200",
+                    description = "Tocka",
+                    content = @Content(
+                            schema = @Schema(implementation
+                                    = Tocke.class))
+            )})
     @Path("{id}")
     @GET
     public Response vrniTocke(@PathParam("id") Integer id) {
@@ -73,6 +91,13 @@ public class TockeVir {
 
     }
 
+    @Operation(description = "Doda tocko v bazo.", summary = "Dodajanje tocke", tags = "tocke", responses = {
+            @ApiResponse(responseCode = "200",
+                    description = "Tocka je bila dodana",
+                    content = @Content(
+                            schema = @Schema(implementation
+                                    = Tocke.class))
+            )})
     @POST
     public Response dodajTocke(Tocke tocke) {
         System.out.println(tocke.getPonudnik_id());
@@ -83,6 +108,13 @@ public class TockeVir {
 
     }
 
+    @Operation(description = "Posodoboi tocko z dolocenim id-jem.", summary = "Posodabljanje tocke", tags = "tocke", responses = {
+            @ApiResponse(responseCode = "200",
+                    description = "Tocka je bila posodoboljena",
+                    content = @Content(
+                            schema = @Schema(implementation
+                                    = Tocke.class))
+            )})
     @Path("{id}")
     @PUT
     public Response posodobiPocke(@PathParam("id") Integer id, Tocke tocke) {
@@ -96,6 +128,13 @@ public class TockeVir {
 
     }
 
+    @Operation(description = "Izbrise tocko z dolocenim id-jem iz baze.", summary = "Brisanje tocke", tags = "tocke", responses = {
+            @ApiResponse(responseCode = "200",
+                    description = "Tocka je bila izbrisana",
+                    content = @Content(
+                            schema = @Schema(implementation
+                                    = Tocke.class))
+            )})
     @Path("{id}")
     @DELETE
     public Response izbrisiTocke(@PathParam("id") Integer id) {
