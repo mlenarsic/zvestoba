@@ -38,7 +38,7 @@ public class StoritveVir {
 
     public Storitve_ponudnik vrniStoritevSPonudnikom(Storitev s){
         Ponudnik p =  httpClient
-                .target("http://localhost:8081/v1/ponudniki/" + s.getPonudnikId())
+                .target("http://ponudniki.herokuapp.com/v1/ponudniki/" + s.getPonudnikId())
                 .request()
                 .get(new GenericType<Ponudnik>(){});
         Storitve_ponudnik SP = new Storitve_ponudnik();

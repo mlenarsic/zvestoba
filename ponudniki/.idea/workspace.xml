@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="218a70c1-f676-4990-b214-3f3ec160567a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../projekt_zvestoba/api/target/classes/classes/StoritveVir.class" afterPath="$PROJECT_DIR$/../projekt_zvestoba/api/target/classes/classes/StoritveVir.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../projekt_zvestoba/api/target/classes/classes/TockeVir.class" afterPath="$PROJECT_DIR$/../projekt_zvestoba/api/target/classes/classes/TockeVir.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../projekt_zvestoba/storitve/target/classes/classes/DodaniPonudnikiWorker$1.class" afterPath="$PROJECT_DIR$/../projekt_zvestoba/storitve/target/classes/classes/DodaniPonudnikiWorker$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../projekt_zvestoba/storitve/target/classes/classes/DodaniPonudnikiWorker.class" afterPath="$PROJECT_DIR$/../projekt_zvestoba/storitve/target/classes/classes/DodaniPonudnikiWorker.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/PonudnikiVir.java" afterPath="$PROJECT_DIR$/src/main/java/PonudnikiVir.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config.yaml" afterPath="$PROJECT_DIR$/src/main/resources/config.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../projekt_zvestoba/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../projekt_zvestoba/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../projekt_zvestoba/api/src/main/java/classes/StoritveVir.java" afterPath="$PROJECT_DIR$/../projekt_zvestoba/api/src/main/java/classes/StoritveVir.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../projekt_zvestoba/api/src/main/java/classes/TockeVir.java" afterPath="$PROJECT_DIR$/../projekt_zvestoba/api/src/main/java/classes/TockeVir.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../projekt_zvestoba/api/target/classes/META-INF/resources/java.lang.Object" afterPath="$PROJECT_DIR$/../projekt_zvestoba/api/target/classes/META-INF/resources/java.lang.Object" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -58,8 +49,8 @@
       <file leaf-file-name="PonudnikiVir.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/PonudnikiVir.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="35" column="24" lean-forward="false" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+            <state relative-caret-position="584">
+              <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -356,12 +347,12 @@
       <workItem from="1513119415700" duration="20000" />
       <workItem from="1513181586042" duration="3738000" />
       <workItem from="1513349356116" duration="1509000" />
-      <workItem from="1516347732338" duration="2577000" />
+      <workItem from="1516347732338" duration="2814000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7844000" />
+    <option name="totallyTimeSpent" value="8081000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="372" y="-16" width="3484" height="2192" extended-state="6" />
@@ -375,7 +366,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20336036" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33333334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33333334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -551,8 +542,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/PonudnikiVir.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="35" column="24" lean-forward="false" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+        <state relative-caret-position="584">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding />
         </state>
       </provider>
