@@ -1,7 +1,7 @@
 # Project Zvestoba
 ## Namen
-Application **Zvestoba** (Loyalty) enables user collection of loyalty points. User collects points when using services. *User's collected
-points* growth depends on worth of service used. The user can than collected points use for special offers with different providers.
+Application **Zvestoba** (Loyalty) enables user collection of loyalty points. User collects points when using services. User's collected
+points growth depends on worth of service used. The user can than use collected points for special offers from different providers.
 The app is built as a project for the Software Development Processes course at Faculty of Computer and Information Science, University of Ljubljana.
 ## Prerequsites
 This is a **maven** project written in **Java** with a simple **Angular5** example frontend. It uses **JPA** for databse access.
