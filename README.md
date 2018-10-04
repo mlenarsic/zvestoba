@@ -1,6 +1,6 @@
 # Project Zvestoba
 ## Namen
-Application **Zvestoba**(Loyalty) enables user collection of loyalty points. User collects points when using services. *User's collected
+Application **Zvestoba** (Loyalty) enables user collection of loyalty points. User collects points when using services. *User's collected
 points* growth depends on worth of service used. The user can than collected points use for special offers with different providers.
 The app is built as a project for the Software Development Processes course at Faculty of Computer and Information Science, University of Ljubljana.
 ## Prerequsites
