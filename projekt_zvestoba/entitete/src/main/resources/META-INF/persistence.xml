@@ -3,9 +3,9 @@
     <persistence-unit name="zvestoba-jpa" transaction-type="JTA">
         <jta-data-source>jdbc/ZvestobaDS/</jta-data-source>
 
-        <class>Storitev</class>
-        <class>Tocke</class>
-        <class>Uporabnik</class>
+        <class>classes.Storitev</class>
+        <class>classes.Tocke</class>
+        <class>classes.Uporabnik</class>
 
         <properties>
             <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>

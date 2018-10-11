@@ -1,0 +1,53 @@
+<div *ngIf="uporabnik">
+
+    <h3>Podrobnosti uporabnika {{uporabnik.ime}}</h3>
+
+    <table style="width: 70%;" class="uporabniki">
+        <tr>
+            <td>Id:</td>
+            <td>{{uporabnik.id}}</td>
+        </tr>
+        <tr>
+            <td>Ime:</td>
+            <td>{{uporabnik.ime}}</td>
+        </tr>
+        <tr>
+            <td>Priimek:</td>
+            <td>{{uporabnik.priimek}}</td>
+        </tr>
+        <tr>
+            <td>Uporabniško ime:</td>
+            <td>{{uporabnik.uporabnisko_ime}}</td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td>{{uporabnik.email}}</td>
+        </tr>
+    </table>
+    <button (click)="posodobiUporabnika(uporabnik.id)">Posodobi</button>
+    <br>
+    <h4>Kartice:</h4>
+    <table style="width: 100%;">
+        <tr>
+            <th></th>
+            <th>Ponudnik</th>
+            <th>Število točk</th>
+        </tr>
+        <tr *ngFor="let tocka of uporabnik.tocke">
+            <td><button class="delete"
+                    (click)="posodobi(tocka); $event.stopPropagation()">+
+            </button>
+            </td>
+            <td align="center">{{tocka.ponudnik.ime}}</td>
+            <td align="center">{{tocka.zbrane_tocke}}</td>
+            <button class="delete"
+                    (click)="delete(tocka); $event.stopPropagation()">x
+            </button>
+        </tr>
+
+    </table>
+
+
+    <button (click)="nazaj()">Nazaj</button>
+    <button (click)="dodajKartico(uporabnik)">Dodaj novo kartico</button>
+</div>
